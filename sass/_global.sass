@@ -1,0 +1,364 @@
+html,
+body
+	height: 100%
+
+body
+	--color-bg: #212429
+	--color-title: #fff
+	--color-text: rgba(224,224,255,0.6)
+	--card-bg: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
+	--box-shadow: 8px 8px 24px rgba(9, 13, 20, 0.4)
+	--color-card-heading: #E0E0FF
+	--section-bg: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
+	--input-bg: rgba(224,224,255,0.1)
+	--input-bg-hover: rgba(224,224,255,0.16)
+	--form-bg: #2D2F33
+	--select-bg: rgba(224,224,255,0.1)
+	--select-bg-hover: rgba(224,224,255,0.16)
+	--list-bg: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
+
+body.theme--ligth
+	--color-bg: #fff
+	--color-title: #212429
+	--color-text: rgba( 33, 36, 41, 0.7)
+	--card-bg: #fff
+	--box-shadow: 8px 8px 35px rgba(54, 25, 119, 0.11)
+	--color-card-heading: #212429
+	--section-bg: #F3F3FC
+	--input-bg: #F3F3FC
+	--input-bg-hover: #ECECF9
+	--form-bg: #fff
+	--seletc-bg: #F3F3FC
+	--seletc-bg-hover: #ECECF9
+	--list-bg: #fff
+body
+	font-family: 'Montserrat', sans-serif
+	background-color: var(--color-bg)
+	color: var(--color-title)
+	font-weight: 600
+	font-size: 18px
+	line-height: 30px
+	overflow-x: hidden
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.main
+	flex: 1 0 auto
+
+.footer
+	flex: 0 0 auto
+
+.container
+  max-width: 1190px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+
+.inner
+	background: var(--section-bg)
+
+h1
+	font-weight: 800
+	font-size: 72px
+	line-height: 72px
+	letter-spacing: -0.05em
+h2
+	font-weight: 800
+	font-size: 44px
+	line-height: 52px
+	letter-spacing: -0.05em
+h3
+	font-weight: 800
+	font-size: 38px
+	line-height: 48px
+	letter-spacing: -0.05em
+h4
+	font-weight: 500
+	font-size: 24px
+	line-height: 40px
+p
+	font-size: 16px
+	line-height: 32px
+	font-weight: 400
+
+textarea
+	outline: none
+	border: none
+	resize: none
+
+.link
+	font-weight: 500
+	color: var(--color-title)
+	text-decoration: underline
+	opacity: 1
+
+.flex-content
+	display: flex
+	align-items: center
+
+.btn
+	display: inline-block
+	padding: 22px 33px 21px 33px
+	position: relative
+	border-radius: 12px
+	cursor: pointer
+	span
+		z-index: 2
+		position: relative
+
+.btn-arrow
+	z-index: 2
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		right: -30px
+		top: 4px
+		background-image: url(../images/icons/arrow-right.svg)
+		background-repeat: no-repeat
+		background-size: contain
+		width: 18px
+		height: 13px
+	&.disabled
+		opacity: 0.4
+		pointer-events: none
+
+.select-btn
+	padding: 22px 33px 21px 33px
+	background: linear-gradient(135deg, #00BBFF 0%, #9C42F5 53%, #5D2DE1 100%)
+	color: #fff
+	box-shadow: 0px 8px 8px rgba(156, 66, 245, 0.122)
+	&::before
+		content: ""
+		position: absolute
+		background: linear-gradient(135deg, #5D2DE1 0%, #9C42F5 53%, #00BBFF 100%)
+		box-shadow: 0px 8px 8px rgba(156, 66, 245, 0.122)
+		border-radius: 12px
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0px
+		right: 0
+		bottom: 0
+		opacity: 0
+		transition: all .3s ease-in-out
+	&:hover::before
+		opacity: 1
+	.btn-arrow
+		margin-right: 28px
+
+body.theme--ligth .btn-transparent
+	border: 1px solid #9191A5
+	&:hover
+		background-color: rgba(#9191A5, 0.2)
+		border-color: transparent
+	.btn-arrow::before
+		filter: invert(100%)
+
+.btn-transparent
+	padding: 22px 67px 21px 33px
+	border: 1px solid rgba(#FFFFFF, 0.2)
+	transition: all .3s
+	&:hover
+		background-color: rgba(#FFFFFF, 0.2)
+		border-color: transparent
+
+.btn_white
+	display: inline-flex
+	align-items: center
+	background: #fff
+	color: $purple
+	box-shadow: 0px 8px 8px rgba(156, 66, 245, 0.122)
+	transition: all .3s
+	&:hover
+		background: rgba(#FFFFFF, 0.2)
+		color: #fff
+		svg path
+			fill: #fff
+	&.disabled
+		opacity: 0.4
+		pointer-events: none
+
+.btn_white svg
+	margin-left: 22px
+	path
+		transition: fill .3s
+
+.buttons-group .select-btn
+	margin-right: 30px
+
+body.theme--ligth .square-btn
+	&::before
+		display: none
+	&:hover
+		box-shadow: 8px 8px 35px rgba(54, 25, 119, 0.18)
+	svg path
+		fill: $black
+
+.square-btn
+	position: relative
+	@include centerFlex
+	width: 48px
+	height: 48px
+	box-shadow: var(--box-shadow)
+	border-radius: 12px
+	overflow: hidden
+	background: var(--card-bg)
+	transition: all .3s
+	span
+		position: relative
+		@include centerFlex
+		z-index: 1
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(0deg, #2D2F33, #2D2F33)
+		opacity: 0
+		transition: all .3s
+	&:hover::before
+		opacity: 1
+	&.disabled
+		pointer-events: none
+		svg
+			opacity: 0.4
+
+	&.large
+		width: 68px
+		height: 68px
+
+.icon-box
+	width: 68px
+	height: 68px
+	@include centerFlex
+	background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
+	box-shadow: 8px 8px 24px rgba(9, 13, 20, 0.4)
+	border-radius: 12px
+
+.outline
+	position: relative
+	display: inline-block
+	&::before
+		content: ""
+		position: absolute
+		left: -10px
+		top: -5px
+		right: 0px
+		width: 115%
+		height: 120%
+		background-image: url(../images/outline.svg)
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: contain
+
+.card
+	position: relative
+	background: var(--card-bg)
+	box-shadow: var(--box-shadow)
+	border-radius: 12px
+	padding: 30px
+	overflow: hidden
+	&:hover .card__text,.card__heading
+		color: var(--color-title)
+
+	&_small
+		width: 260px
+	&_larg
+		width: 360px
+	&-circle__icon
+		width: 73px
+		height: 73px
+		border-radius: 50%
+		margin-bottom: 24px
+		@include centerFlex
+		transition: all .3s ease-out
+	&__heading
+		font-size: 24px
+		line-height: 40px
+		color: var(--color-title)
+	&__supheading
+		color: $purple
+		font-weight: 500
+		font-size: 12px
+		line-height: 20px
+	&__text
+		margin-top: 15px
+		font-weight: 500
+		font-size: 16px
+		line-height: 24px
+		color: var(--color-text)
+		transition: color .3s
+	&__icon-bottom
+		position: relative
+		margin-top: 60px
+		border-radius: 12px
+		width: 54px
+		height: 54px
+		@include centerFlex
+		transition: all .3s ease-out
+		z-index: 3
+
+.card.center
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	text-align: center
+
+.card.white
+	background: #fff
+	.card__heading
+		color: $black
+	.card__text
+		color: rgba($black, 0.6)
+
+.purple-bg
+	background-color: #9C42F5
+.orange-bg
+	background-color: #F56D42
+.blue-bg
+	background-color: #4269F5
+.pink-bg
+	background-color: #F54282
+.green-bg
+	background-color: #42F574
+.red-bg
+	background-color: #F54242
+
+.slider-arrows
+	@include FlexBetween
+	width: 114px
+
+.slick-slide
+	outline: none
+body.theme--ligth
+	.user.white-bg, .user.grey-bg
+		background-color: #fff
+
+.user.blue-bg
+	width: 115px
+	height: 115px
+.user.pink-bg
+	width: 74px
+	height: 74px
+.user.white-bg
+	width: 124px
+	height: 124px
+	background-color: rgba(#FFFFFF, 0.2)
+
+.user.purple-bg
+	width: 142px
+	height: 142px
+.user.orange-bg
+	width: 141px
+	height: 141px
+.user.grey-bg
+	width: 141px
+	height: 141px
+	background-color: rgba(#fff, 0.1)
