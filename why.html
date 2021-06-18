@@ -198,11 +198,25 @@
         </div>
       </div>
       <div>
-        <div class="marquee">
-          <a href="#" class="marquee__link">Easy</a>
-          <a href="#" class="marquee__link">Audience</a>
-          <a href="#" class="marquee__link">Benefits</a>
-          <a href="#" class="marquee__link">Case studies</a>
+        <div class="page">
+          <div class="marquee">
+            <div class="marquee__track">
+              <ul class="marquee__line">
+                <li class="marquee__text">Easy</li>
+                <li class="marquee__text">Audience</li>
+                <li class="marquee__text">Benefits</li>
+                <li class="marquee__text">Case</li>
+                <li class="marquee__text">studies </li>
+              </ul>
+              <ul class="marquee__line marquee__line--copy">
+                <li class="marquee__text">Easy</li>
+                <li class="marquee__text">Audience</li>
+                <li class="marquee__text">Benefits</li>
+                <li class="marquee__text">Case</li>
+                <li class="marquee__text">studies</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -617,7 +631,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="libs/counterUp.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
   <script src="js/main.js"></script>
 
   <script>
@@ -629,13 +642,6 @@
 
     var bottomSurfaces = document.getElementById('bottom-surfaces');
     var parallaxInstance = new Parallax(bottomSurfaces);
-
-
-    $('.marquee').marquee({
-      duration: 6000,
-      startVisible: true,
-      duplicated: true
-    });
   </script>
 </body>
 

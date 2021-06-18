@@ -3456,61 +3456,102 @@ body.theme--ligth
     &__inner
         display: flex
         margin-bottom: 130px
-.marquee
+// .marquee
+//     margin-bottom: 140px
+//     width: 100%
+//     height: 72px
+//     animation-delay: 2s
+//     z-index: 3
+//     position: relative
+//     font-weight: 800
+//     font-size: 72px
+//     line-height: 72px
+//     letter-spacing: -0.05em
+
+//     &__link
+//         color: var(--color-bg)
+//         text-shadow: var(--box-shadow)
+//         position: relative
+//         padding-left: 90px
+//         filter: drop-shadow(5px 5px 20px rgba(9, 13, 20, 0.4))
+//         margin: 20px auto
+//         transition: all .3s
+//         background-position: 100%
+//         // &:hover
+//         //     background: linear-gradient(90deg, rgba(45, 47, 51, 0) 22.49%, #E83F83 34.79%, #9A41F3 47.56%, #17AAFE 55.91%, #9A41F3 63.69%, #E83F83 74.78%, rgba(33, 36, 41, 0) 87.01%)
+//         //     -webkit-background-clip: text
+//         //     -webkit-text-fill-color: transparent
+//         //     background-size: 105% 100%
+//         //     background-position: 0 100%
+//         //     &::before
+//         //         background-size: 105% 100%
+//         //         background-position: 0 100%
+//         //         background: linear-gradient(90deg, rgba(45, 47, 51, 0) 22.49%, #E83F83 34.79%, #9A41F3 47.56%, #17AAFE 55.91%, #9A41F3 63.69%, #E83F83 74.78%, rgba(33, 36, 41, 0) 87.01%)
+//         //         -webkit-background-clip: text
+//         //         -webkit-text-fill-color: transparent
+
+//         &::before
+//             content: "*"
+//             position: absolute
+//             left: 25px
+//             top: 27px
+//             color: var(--color-bg)
+//             text-shadow: var(--box-shadow)
+//             background-size: 200% 100%
+//             background-position: 100%
+//             transition: all .3s
+
+// .js-marquee-wrapper
+//     &:hover
+//         animation-play-state: paused !important
+
+.page
+    display: flex
+    flex-direction: column
+    background-color: var(--color-bg)
+    min-height: 72px
     margin-bottom: 140px
-    width: 100%
-    height: 72px
-    animation-delay: 2s
-    z-index: 3
+
+.marquee
+    margin-top: 50px
+    overflow: hidden
+
+    &__track
+        position: relative
+        display: inline-flex
+        animation: marqueeAnimation 10s linear infinite
+
+@keyframes marqueeAnimation
+    to
+        transform: translateX(-50%)
+
+.marquee__line
+    display: inline-flex
+    padding: 0
+    margin: 0
+    list-style: none
+
+.marquee__text
     position: relative
+    margin-right: 10px
+    text-transform: uppercase
+    background-image: var(--marquee-gradient)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25))
+    user-select: none
     font-weight: 800
     font-size: 72px
     line-height: 72px
     letter-spacing: -0.05em
+    color: var(--color-bg)
+    &--animation
+        color: transparent
 
-    &__link
-        color: var(--color-bg)
-        text-shadow: var(--box-shadow)
-        position: relative
-        padding-left: 90px
-        filter: drop-shadow(5px 5px 20px rgba(9, 13, 20, 0.4))
-        margin: 20px auto
-        transition: all .3s
-        background-position: 100%
-        // &:hover
-        //     background: linear-gradient(90deg, rgba(45, 47, 51, 0) 22.49%, #E83F83 34.79%, #9A41F3 47.56%, #17AAFE 55.91%, #9A41F3 63.69%, #E83F83 74.78%, rgba(33, 36, 41, 0) 87.01%)
-        //     -webkit-background-clip: text
-        //     -webkit-text-fill-color: transparent
-        //     background-size: 105% 100%
-        //     background-position: 0 100%
-        //     &::before
-        //         background-size: 105% 100%
-        //         background-position: 0 100%
-        //         background: linear-gradient(90deg, rgba(45, 47, 51, 0) 22.49%, #E83F83 34.79%, #9A41F3 47.56%, #17AAFE 55.91%, #9A41F3 63.69%, #E83F83 74.78%, rgba(33, 36, 41, 0) 87.01%)
-        //         -webkit-background-clip: text
-        //         -webkit-text-fill-color: transparent
-
-        &::before
-            content: "*"
-            position: absolute
-            left: 25px
-            top: 27px
-            color: var(--color-bg)
-            text-shadow: var(--box-shadow)
-            background-size: 200% 100%
-            background-position: 100%
-            transition: all .3s
-
-.js-marquee-wrapper
-    &:hover
-        animation-play-state: paused !important
-
-@keyframes scroll
-    from
-        background-position: 0 0
-
-    to
-        background-position: -1696px 0
+    &:not(:last-child)::before
+        content: '*'
+        margin-right: 10px
+        vertical-align: sub
 
 body.theme--ligth
     .why-map__img
