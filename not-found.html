@@ -9,11 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css" id="theme">
+  <link rel="stylesheet" href="css/style.min.css?ver=0.0.1">
+
 </head>
 
 <body>
-
   <nav class="mobile-menu">
     <div class="mobile-menu__header">
       <button class="header__btn-theme square-btn">
@@ -40,7 +40,7 @@
       <ul class="header__menu">
         <li class="header__menu-list has-dropdown"><span class="header__menu-link">Features</span>
           <ul>
-            <li><a href="live-demands.html">LIVE Events</a></li>
+            <li><a href="live-demands.html">Live demands</a></li>
             <li><a href="#">On-demand events</a></li>
             <li><a href="features.html">All features</a></li>
           </ul>
@@ -80,7 +80,14 @@
           </svg>
         </a>
         <ul class="header__menu">
-          <li class="header__menu-list"><a class="header__menu-link" href="features.html">Features</a></li>
+          <li class="header__menu-list has-dropdown">
+
+            <span class="header__menu-link">Features</span>
+            <ul>
+              <li><a href="live-demands.html">Live demand</a></li>
+              <li><a href="features.html">All features</a></li>
+            </ul>
+          </li>
           <li class="header__menu-list"><a class="header__menu-link" href="why.html">Why Everytale</a></li>
           <li class="header__menu-list"><a class="header__menu-link" href="pricing.html">Pricing</a></li>
           <li class="header__menu-list"><a class="header__menu-link" href="ambassadors.html">Ambassadors</a></li>
@@ -138,20 +145,23 @@
   </header>
   <div class="wrapper">
     <main class="main">
-      <div class="box-center">
-        <div class="box-center__card">
-          <img class="box-center__img" src="images/turtle.jpg" alt="">
+      <div class="container">
+        <div class="box-center">
+          <div class="box-center__card">
+            <img class="box-center__img" src="images/turtle.jpg" alt="">
+          </div>
+          <h1 class="box-center__heading">
+            Page not found
+          </h1>
+          <h4 class="box-center__text">
+            Sorry chief, but this page doesn’t exist
+          </h4>
+          <a class="btn select-btn" href="index.html">
+            <span class="btn-arrow--mob">Back to home</span>
+          </a>
         </div>
-        <h1 class="box-center__heading">
-          Page not found
-        </h1>
-        <h4 class="box-center__text">
-          Sorry chief, but this page doesn’t exist
-        </h4>
-        <a class="btn select-btn" href="index.html">
-          <span class="btn-arrow--mob">Back to home</span>
-        </a>
       </div>
+
     </main>
     <footer class="footer">
       <div class="footer__top">

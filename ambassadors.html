@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css" id="theme">
+    <link rel="stylesheet" href="css/style.min.css?ver=0.0.1">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
                 <ul class="header__menu">
                     <li class="header__menu-list has-dropdown"><span class="header__menu-link">Features</span>
                         <ul>
-                            <li><a href="live-demands.html">LIVE Events</a></li>
+                            <li><a href="live-demands.html">Live demands</a></li>
                             <li><a href="#">On-demand events</a></li>
                             <li><a href="features.html">All features</a></li>
                         </ul>
@@ -85,7 +85,13 @@
                         </svg>
                     </a>
                     <ul class="header__menu">
-                        <li class="header__menu-list"><a class="header__menu-link" href="features.html">Features</a>
+                        <li class="header__menu-list has-dropdown">
+
+                            <span class="header__menu-link">Features</span>
+                            <ul>
+                                <li><a href="live-demands.html">Live demand</a></li>
+                                <li><a href="features.html">All features</a></li>
+                            </ul>
                         </li>
                         <li class="header__menu-list"><a class="header__menu-link" href="why.html">Why Everytale</a>
                         </li>
@@ -179,7 +185,7 @@
     </div>
     <div class="block shape-events">
         <div class="container">
-            <div class="block__inner">
+            <div class="block__inner block-slider__inner">
                 <div class="slider-cards__arrow slider-arrows"></div>
                 <div class="slider-cards">
                     <div class="card center card_larg">

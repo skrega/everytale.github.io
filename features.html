@@ -16,11 +16,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css" id="theme">
+    <link rel="stylesheet" href="css/style.min.css?ver=0.0.1">
+
 </head>
 
 <body>
-
     <nav class="mobile-menu">
         <div class="mobile-menu__header">
             <button class="header__btn-theme square-btn">
@@ -45,10 +45,9 @@
         </div>
         <div class="mobile-menu__inner">
             <ul class="header__menu">
-                <li class="header__menu-list has-dropdown"><a class="header__menu-link"
-                        href="features.html">Features</a>
+                <li class="header__menu-list has-dropdown"><span class="header__menu-link">Features</span>
                     <ul>
-                        <li><a href="live-demands.html">LIVE Events</a></li>
+                        <li><a href="live-demands.html">Live demands</a></li>
                         <li><a href="#">On-demand events</a></li>
                         <li><a href="features.html">All features</a></li>
                     </ul>
@@ -56,6 +55,7 @@
                 <li class="header__menu-list"><a class="header__menu-link" href="why.html">Why Everytale</a></li>
                 <li class="header__menu-list"><a class="header__menu-link" href="pricing.html">Pricing</a></li>
                 <li class="header__menu-list"><a class="header__menu-link" href="ambassadors.html">Ambassadors</a></li>
+                <li class="header__menu-list"><a class="header__menu-link" href="contact.html">Contact us</a></li>
             </ul>
             <a class="select-btn btn" href="#">
                 <span> Sign in</span>
@@ -87,11 +87,19 @@
                     </svg>
                 </a>
                 <ul class="header__menu">
-                    <li class="header__menu-list"><a class="header__menu-link" href="features.html">Features</a></li>
+                    <li class="header__menu-list has-dropdown">
+
+                        <span class="header__menu-link">Features</span>
+                        <ul>
+                            <li><a href="live-demands.html">Live demand</a></li>
+                            <li><a href="features.html">All features</a></li>
+                        </ul>
+                    </li>
                     <li class="header__menu-list"><a class="header__menu-link" href="why.html">Why Everytale</a></li>
                     <li class="header__menu-list"><a class="header__menu-link" href="pricing.html">Pricing</a></li>
                     <li class="header__menu-list"><a class="header__menu-link" href="ambassadors.html">Ambassadors</a>
                     </li>
+
                 </ul>
             </div>
             <div class="header__nav flex-content">
@@ -122,7 +130,7 @@
             </div>
         </div>
         <div class="header__container header__container--mobile">
-            <button class="header__btn-theme square-btn">
+            <button class="header__btn-theme square-btn" id="switchModeMobile">
                 <span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -142,21 +150,6 @@
                 <i></i>
             </button>
         </div>
-        <!-- <div id="scene">
-          <svg class="broadcast__surface_top" data-depth="0.2" width="580" height="148" viewBox="0 0 580 148" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M580 -142C580 -302.163 450.163 -432 290 -432C129.837 -432 0 -302.163 0 -142C0 18.1626 129.837 148 290 148C450.163 148 580 18.1626 580 -142Z"
-              fill="url(#paint0_linear)" />
-            <defs>
-              <linearGradient id="paint0_linear" x1="0" y1="-432" x2="580" y2="148" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF00AA" />
-                <stop offset="0.502" stop-color="#9C42F5" />
-                <stop offset="1" stop-color="#5D2DE1" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>-->
     </header>
     <div class="wrapper">
         <main class="main">
@@ -385,7 +378,7 @@
                         <img data-depth="0.5" src="images/surfaces/surface-purple.svg" alt="">
                     </div>
                     <div class="container">
-                        <div class="block__inner">
+                        <div class="block__inner block-slider__inner">
                             <div class="slider-cards__arrow slider-arrows"></div>
                             <div class="slider-cards">
                                 <div class="card center card_larg">
@@ -499,7 +492,10 @@
                                 </a>
                             </div>
                             <div class="lifecycle-img">
-                                <img src="images/lifecycle-img.jpg" alt="">
+                                <object data="images/lifecycle-gif.gif" type="">
+
+                                </object>
+                                <!--<img src="images/lifecycle-img.jpg" alt="">-->
                             </div>
                         </div>
                     </div>
@@ -524,61 +520,61 @@
                             With this enhanced security you can continue to focus on building out the material while
                             we focus on getting you paid
                         </p>
-                        <div class="money-transfer__box money-transfer__box-1 animate__animated animate__fadeIn wow"
-                            data-wow-delay="1s">
-                            <div class="money-transfer__box-content">
+                        <div class="money-transfer__box money-transfer__box-1">
+                            <div class="money-transfer__box-content wow" data-wow-delay="1s">
                                 $ 2 890 transferred
                             </div>
-                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="animate__animated animate__fadeIn wow animate__infinite"
+                                data-wow-duration="1.5s" data-wow-delay="1s" width="42" height="42" viewBox="0 0 42 42"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M36.96 21.0022C36.96 29.8156 29.8145 36.9605 21 36.9605C12.1855 36.9605 5.03998 29.8156 5.03998 21.0022C5.03998 12.1884 12.1855 5.04355 21 5.04355C29.8145 5.04355 36.96 12.1884 36.96 21.0022ZM42 21.0022C42 32.5989 32.5978 42 21 42C9.40201 42 0 32.5989 0 21.0022C0 9.40519 9.40201 0.00403376 21 0.00403376C32.5978 0.00403376 42 9.40519 42 21.0022ZM41.9978 2.49977C41.9978 3.88037 40.8786 4.99954 39.4978 4.99954C38.1171 4.99954 36.9979 3.88037 36.9979 2.49977C36.9979 1.1192 38.1171 0 39.4978 0C40.8786 0 41.9978 1.1192 41.9978 2.49977ZM27.1171 21.1669C27.1171 24.4423 24.4619 27.0974 21.1863 27.0974C17.9108 27.0974 15.2554 24.4423 15.2554 21.1669C15.2554 17.8918 17.9108 15.2367 21.1863 15.2367C24.4619 15.2367 27.1171 17.8918 27.1171 21.1669ZM28.8119 21.1669C28.8119 25.3781 25.3979 28.7918 21.1863 28.7918C16.9749 28.7918 13.5609 25.3781 13.5609 21.1669C13.5609 16.956 16.9749 13.5423 21.1863 13.5423C25.3979 13.5423 28.8119 16.956 28.8119 21.1669Z"
                                     fill="#E0E0FF" />
                             </svg>
                         </div>
-                        <div class="money-transfer__box money-transfer__box-2 animate__animated animate__fadeIn wow"
-                            data-wow-delay="2s">
-                            <div class="money-transfer__box-content">
+                        <div class="money-transfer__box money-transfer__box-2" data-wow-delay="2s">
+                            <div class="money-transfer__box-content wow" data-wow-delay="2s">
                                 $ 1 350 transferred
                             </div>
-                            <svg width="34" height="34" viewBox="0 0 42 42" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="animate__animated animate__fadeIn wow animate__infinite"
+                                data-wow-duration="1.5s" data-wow-delay="2s" width="34" height="34" viewBox="0 0 42 42"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M36.96 21.0022C36.96 29.8156 29.8145 36.9605 21 36.9605C12.1855 36.9605 5.03998 29.8156 5.03998 21.0022C5.03998 12.1884 12.1855 5.04355 21 5.04355C29.8145 5.04355 36.96 12.1884 36.96 21.0022ZM42 21.0022C42 32.5989 32.5978 42 21 42C9.40201 42 0 32.5989 0 21.0022C0 9.40519 9.40201 0.00403376 21 0.00403376C32.5978 0.00403376 42 9.40519 42 21.0022ZM41.9978 2.49977C41.9978 3.88037 40.8786 4.99954 39.4978 4.99954C38.1171 4.99954 36.9979 3.88037 36.9979 2.49977C36.9979 1.1192 38.1171 0 39.4978 0C40.8786 0 41.9978 1.1192 41.9978 2.49977ZM27.1171 21.1669C27.1171 24.4423 24.4619 27.0974 21.1863 27.0974C17.9108 27.0974 15.2554 24.4423 15.2554 21.1669C15.2554 17.8918 17.9108 15.2367 21.1863 15.2367C24.4619 15.2367 27.1171 17.8918 27.1171 21.1669ZM28.8119 21.1669C28.8119 25.3781 25.3979 28.7918 21.1863 28.7918C16.9749 28.7918 13.5609 25.3781 13.5609 21.1669C13.5609 16.956 16.9749 13.5423 21.1863 13.5423C25.3979 13.5423 28.8119 16.956 28.8119 21.1669Z"
                                     fill="#E0E0FF" />
                             </svg>
                         </div>
-                        <div class="money-transfer__box money-transfer__box-3 animate__animated animate__fadeIn wow"
-                            data-wow-delay="0.5s">
-                            <div class="money-transfer__box-content">
+                        <div class="money-transfer__box money-transfer__box-3" data-wow-delay="0.5s">
+                            <div class="money-transfer__box-content wow" data-wow-delay="0.5s">
                                 $ 4 790 transferred
                             </div>
-                            <svg width="62" height="62" viewBox="0 0 42 42" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="animate__animated animate__fadeIn wow animate__infinite"
+                                data-wow-duration="1.5s" data-wow-delay="0.5s" width="62" height="62"
+                                viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M36.96 21.0022C36.96 29.8156 29.8145 36.9605 21 36.9605C12.1855 36.9605 5.03998 29.8156 5.03998 21.0022C5.03998 12.1884 12.1855 5.04355 21 5.04355C29.8145 5.04355 36.96 12.1884 36.96 21.0022ZM42 21.0022C42 32.5989 32.5978 42 21 42C9.40201 42 0 32.5989 0 21.0022C0 9.40519 9.40201 0.00403376 21 0.00403376C32.5978 0.00403376 42 9.40519 42 21.0022ZM41.9978 2.49977C41.9978 3.88037 40.8786 4.99954 39.4978 4.99954C38.1171 4.99954 36.9979 3.88037 36.9979 2.49977C36.9979 1.1192 38.1171 0 39.4978 0C40.8786 0 41.9978 1.1192 41.9978 2.49977ZM27.1171 21.1669C27.1171 24.4423 24.4619 27.0974 21.1863 27.0974C17.9108 27.0974 15.2554 24.4423 15.2554 21.1669C15.2554 17.8918 17.9108 15.2367 21.1863 15.2367C24.4619 15.2367 27.1171 17.8918 27.1171 21.1669ZM28.8119 21.1669C28.8119 25.3781 25.3979 28.7918 21.1863 28.7918C16.9749 28.7918 13.5609 25.3781 13.5609 21.1669C13.5609 16.956 16.9749 13.5423 21.1863 13.5423C25.3979 13.5423 28.8119 16.956 28.8119 21.1669Z"
                                     fill="#E0E0FF" />
                             </svg>
                         </div>
-                        <div class="money-transfer__box money-transfer__box-4 animate__animated animate__fadeIn wow"
-                            data-wow-delay="1.5s">
-                            <div class="money-transfer__box-content">
+                        <div class="money-transfer__box money-transfer__box-4 animate__animated animate__fadeIn wow">
+                            <div class="money-transfer__box-content wow" data-wow-delay="1.5s">
                                 $ 990 transferred
                             </div>
-                            <svg width="32" height="32" viewBox="0 0 42 42" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="animate__animated animate__fadeIn wow animate__infinite"
+                                data-wow-duration="1.5s" data-wow-delay="1.5s" width="32" height="32"
+                                viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M36.96 21.0022C36.96 29.8156 29.8145 36.9605 21 36.9605C12.1855 36.9605 5.03998 29.8156 5.03998 21.0022C5.03998 12.1884 12.1855 5.04355 21 5.04355C29.8145 5.04355 36.96 12.1884 36.96 21.0022ZM42 21.0022C42 32.5989 32.5978 42 21 42C9.40201 42 0 32.5989 0 21.0022C0 9.40519 9.40201 0.00403376 21 0.00403376C32.5978 0.00403376 42 9.40519 42 21.0022ZM41.9978 2.49977C41.9978 3.88037 40.8786 4.99954 39.4978 4.99954C38.1171 4.99954 36.9979 3.88037 36.9979 2.49977C36.9979 1.1192 38.1171 0 39.4978 0C40.8786 0 41.9978 1.1192 41.9978 2.49977ZM27.1171 21.1669C27.1171 24.4423 24.4619 27.0974 21.1863 27.0974C17.9108 27.0974 15.2554 24.4423 15.2554 21.1669C15.2554 17.8918 17.9108 15.2367 21.1863 15.2367C24.4619 15.2367 27.1171 17.8918 27.1171 21.1669ZM28.8119 21.1669C28.8119 25.3781 25.3979 28.7918 21.1863 28.7918C16.9749 28.7918 13.5609 25.3781 13.5609 21.1669C13.5609 16.956 16.9749 13.5423 21.1863 13.5423C25.3979 13.5423 28.8119 16.956 28.8119 21.1669Z"
                                     fill="#E0E0FF" />
                             </svg>
                         </div>
-                        <div class="money-transfer__box money-transfer__box-5 animate__animated animate__fadeIn wow"
-                            data-wow-delay="2.2s">
-                            <div class="money-transfer__box-content">
+                        <div class="money-transfer__box money-transfer__box-5" data-wow-delay="2.2s">
+                            <div class="money-transfer__box-content wow" data-wow-delay="2.2s">
                                 $ 2 890 transferred
                             </div>
-                            <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="animate__animated animate__fadeIn wow animate__infinite"
+                                data-wow-duration="1.5s" data-wow-delay="2.2s" width="42" height="42"
+                                viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M36.96 21.0022C36.96 29.8156 29.8145 36.9605 21 36.9605C12.1855 36.9605 5.03998 29.8156 5.03998 21.0022C5.03998 12.1884 12.1855 5.04355 21 5.04355C29.8145 5.04355 36.96 12.1884 36.96 21.0022ZM42 21.0022C42 32.5989 32.5978 42 21 42C9.40201 42 0 32.5989 0 21.0022C0 9.40519 9.40201 0.00403376 21 0.00403376C32.5978 0.00403376 42 9.40519 42 21.0022ZM41.9978 2.49977C41.9978 3.88037 40.8786 4.99954 39.4978 4.99954C38.1171 4.99954 36.9979 3.88037 36.9979 2.49977C36.9979 1.1192 38.1171 0 39.4978 0C40.8786 0 41.9978 1.1192 41.9978 2.49977ZM27.1171 21.1669C27.1171 24.4423 24.4619 27.0974 21.1863 27.0974C17.9108 27.0974 15.2554 24.4423 15.2554 21.1669C15.2554 17.8918 17.9108 15.2367 21.1863 15.2367C24.4619 15.2367 27.1171 17.8918 27.1171 21.1669ZM28.8119 21.1669C28.8119 25.3781 25.3979 28.7918 21.1863 28.7918C16.9749 28.7918 13.5609 25.3781 13.5609 21.1669C13.5609 16.956 16.9749 13.5423 21.1863 13.5423C25.3979 13.5423 28.8119 16.956 28.8119 21.1669Z"
                                     fill="#E0E0FF" />
@@ -605,99 +601,196 @@
                             you will never have to worry about holes in your attendee experience
                         </p>
                     </div>
-                    <div class="data-analysis__slider">
-                        <div class="data-analysis-card purple-bg">
-                            <div class="data-analysis-card__content">
-                                <div class="data-analysis-card__icon card-circle__icon">
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
-                                            fill="#ffffff" />
-                                    </svg>
+
+                    <div class="data-analysis__inner">
+                        <div class="data-analysis__slider">
+                            <div class="data-analysis-card purple-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
                                 </div>
-                                <div class="data-analysis-card__heading card__heading">
-                                    Number of signups
+                            </div>
+                            <div class="data-analysis-card pink-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-analysis-card orange-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number <br>
+                                        of active viewers
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-analysis-card red-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-analysis-card blue-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-analysis-card purple-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="data-analysis-card pink-bg">
-                            <div class="data-analysis-card__content">
-                                <div class="data-analysis-card__icon card-circle__icon">
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
-                                            fill="#ffffff" />
-                                    </svg>
-                                </div>
-                                <div class="data-analysis-card__heading card__heading">
-                                    Number of signups
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-analysis-card orange-bg">
-                            <div class="data-analysis-card__content">
-                                <div class="data-analysis-card__icon card-circle__icon">
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
-                                            fill="#ffffff" />
-                                    </svg>
-                                </div>
-                                <div class="data-analysis-card__heading card__heading">
-                                    Number <br>
-                                    of active viewers
+                        <div class="data-analysis__slider">
+                            <div class="data-analysis-card purple-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="data-analysis-card red-bg">
-                            <div class="data-analysis-card__content">
-                                <div class="data-analysis-card__icon card-circle__icon">
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
-                                            fill="#ffffff" />
-                                    </svg>
-                                </div>
-                                <div class="data-analysis-card__heading card__heading">
-                                    Number of signups
-                                </div>
-                            </div>
-                        </div>
-                        <div class="data-analysis-card blue-bg">
-                            <div class="data-analysis-card__content">
-                                <div class="data-analysis-card__icon card-circle__icon">
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
-                                            fill="#ffffff" />
-                                    </svg>
-                                </div>
-                                <div class="data-analysis-card__heading card__heading">
-                                    Number of signups
+                            <div class="data-analysis-card pink-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="data-analysis-card purple-bg">
-                            <div class="data-analysis-card__content">
-                                <div class="data-analysis-card__icon card-circle__icon">
-                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
-                                            fill="#ffffff" />
-                                    </svg>
+                            <div class="data-analysis-card orange-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number <br>
+                                        of active viewers
+                                    </div>
                                 </div>
-                                <div class="data-analysis-card__heading card__heading">
-                                    Number of signups
+                            </div>
+                            <div class="data-analysis-card red-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-analysis-card blue-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-analysis-card purple-bg">
+                                <div class="data-analysis-card__content">
+                                    <div class="data-analysis-card__icon card-circle__icon">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.1266 0.137873C18.2241 -0.357246 17.2175 0.597626 16.6274 1.16348C15.2737 2.50737 14.1282 4.06346 12.8438 5.47808C11.4206 7.03417 10.1016 8.59025 8.64371 10.111C7.81064 10.9598 6.90814 11.8793 6.35275 12.9403C5.10313 11.7024 4.02708 10.3585 2.63861 9.26226C1.63198 8.48421 -0.0341777 7.91836 0.000533834 9.79274C0.069957 12.233 2.18736 14.8501 3.74938 16.5122C4.4089 17.2195 5.27669 17.9622 6.28333 17.9976C7.49823 18.0683 8.74785 16.5829 9.47679 15.7695C10.7612 14.3549 11.8025 12.7634 12.9827 11.3135C14.51 9.40372 16.072 7.52928 17.5646 5.58418C18.5018 4.38175 21.4523 1.41098 19.1266 0.137873Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                    <div class="data-analysis-card__heading card__heading">
+                                        Number of signups
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="support block">
                     <div class="container">

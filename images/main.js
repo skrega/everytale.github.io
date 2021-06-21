@@ -226,10 +226,6 @@ $(function () {
     }
 
     //tabs end
-    $('.has-dropdown span').click(function (e) {
-        e.preventDefault();
-        $(this).next('ul').slideToggle().parent('.has-dropdown').toggleClass('opened');
-    });
 
     // media queries
     if ($(window).width() <= 768) {
@@ -238,7 +234,10 @@ $(function () {
             $('.header__btn-menu').toggleClass('opened');
             $('body').toggleClass('opened-menu');
         });
-
+        $('.has-dropdown span').click(function (e) {
+            e.preventDefault();
+            $(this).next('ul').slideToggle().parent('.has-dropdown').toggleClass('opened');
+        });
         if ($('.watch-now__link').length > 0) {
             $('.watch-now__link').prependTo($('.watch-now__link').closest('.watch-now__inner'));
         }
@@ -454,11 +453,10 @@ $(function () {
     $('.partners__slider').slick({
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 6,
         slidesToScroll: 6,
         centerMode: true,
         centerPadding: '117px',
-        variableWidth: true,
         arrows: false,
         responsive: [{
             breakpoint: 768,
@@ -474,7 +472,7 @@ $(function () {
         $('.partners-tabs .active-tab').children('.partners__slider').slick('slickPrev');
     });
     $('.partners__slider-arrow.slider-btn__right').click(function () {
-        $('.partners-tabs .active-tab').children('.data-analysis').slick('slickNext');
+        $('.partners-tabs .active-tab').children('.partners__slider').slick('slickNext');
     });
 
     $('.whom__slider').slick({
@@ -685,7 +683,7 @@ $(function () {
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         swipeToSlide: true,
         variableWidth: true,
         appendArrows: '.slider-cards__arrow',
@@ -706,20 +704,20 @@ $(function () {
         $(".slider-cards").slick("slickGoTo", index);
     });
 
-    // $('.data-analysis__slider').slick({
-    //     centerMode: true,
-    //     centerPadding: '0px',
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 5,
-    //     slidesToScroll: 1,
-    //     variableWidth: true,
-    //     swipeToSlide: true,
-    //     arrows: false,
-    //     autoplay: true,
-    //     autoplaySpeed: 1000,
-    //     pauseOnHover: true
-    // });
+    $('.data-analysis__slider').slick({
+        centerMode: true,
+        centerPadding: '0px',
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        variableWidth: true,
+        swipeToSlide: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        pauseOnHover: true
+    });
 
 
     // faq accordion start 

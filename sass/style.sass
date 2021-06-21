@@ -28,7 +28,7 @@ body.theme--ligth
         margin-left: 50px
         display: flex
         align-items: center
-    &__menu-list:not(:last-child)
+    &__menu-list:not(:first-child)
         margin-right: 50px
     &__menu-link
         font-size: 16px
@@ -51,6 +51,44 @@ body.theme--ligth
     &__btn.disabled
         opacity: 0.4
         pointer-events: none
+
+.header__menu-list.has-dropdown
+    padding-right: 50px
+    margin-right: 10px
+    cursor: pointer
+    border-top-right-radius: 8px
+    border-top-left-radius: 8px
+    transition: all .4s
+    span
+        position: relative
+        padding-right: 20px
+        padding-left: 20px
+        &:after
+            content: ""
+            display: block
+            position: absolute
+            top: 8px
+            right: 0
+            width: 9px
+            height: 6px
+            background-image: url('../images/icons/arrow.svg')
+            background-repeat: no-repeat
+            background-size: contain
+            transition: .2s
+            &.opened > span:after
+                transform: rotate(180deg)
+    &.opened
+        background: #40424B
+        padding-top: 8px
+
+    ul
+        display: none
+        position: absolute
+        list-style: none
+        padding: 0px 21px 10px 20px
+        background: #40424B
+        border-bottom-left-radius: 8px
+        border-bottom-right-radius: 8px
 
 body.theme--ligth
     .lang-switcher.active
@@ -571,6 +609,7 @@ body.theme--ligth
         display: flex !important
         align-items: center
         justify-content: center
+        margin-right: 117px
         &:hover
             opacity: 1
     &__slider
@@ -1133,9 +1172,12 @@ body.theme--ligth .jq-selectbox__trigger-arrow
         align-items: flex-start
         margin-bottom: 140px
         margin-top: 50px
+
     .tabs
         flex-direction: column
         display: flex
+        position: sticky
+        top: 10px
     &-tab
         position: relative
         font-weight: 500
@@ -1212,7 +1254,7 @@ body.theme--ligth .blog__card
         font-size: 14px
         line-height: 16px
         border-radius: 4px
-        color: var(--color-bg)
+        color: #fff
         &::before
             content: ""
             position: absolute
@@ -1255,7 +1297,7 @@ body.theme--ligth .article__nav::before
             background-position: center
     &__links
         position: sticky
-        top: 0
+        top: 18px
     &__inner
         @include FlexStart
         margin-top: 20px
@@ -1885,7 +1927,7 @@ body.theme--ligth .pricing-item__li::before
         display: block
         text-align: center
         border-radius: 12px
-        color: var(--color-bg)
+        color: #fff
         transition: all .3s
         &.disabled
             opacity: 0.3
@@ -2327,6 +2369,7 @@ body.theme--ligth
     @include centerFlex
     height: 741px
     margin-top: -50px
+    z-index: 1
     &::before,
     &::after
         content: ""
@@ -2365,32 +2408,33 @@ body.theme--ligth
 
 .circle-user:nth-child(1)
     transform: translate(-200px, -160px)
-    animation: circleUser1 11s linear infinite
+    animation: circleUser1 25s linear infinite
 
 .circle-user:nth-child(2)
-    transform: translate(-40px, -211px)
-    animation: circleUser2 11s linear infinite
+    transform: translate(-40px, -217px)
+    animation: circleUser2 25s linear infinite
 
 .circle-user:nth-child(3)
     transform: translate(208px, -150px)
-    animation: circleUser3 11s linear infinite
+    animation: circleUser3 25s linear infinite
 
 .circle-user:nth-child(4)
-    transform: translate(248px, 120px)
-    animation: circleUser4 11s linear infinite
+    transform: translate(240px, 95px)
+    animation: circleUser4 25s linear infinite
 
 .circle-user:nth-child(5)
     width: 108px
     height: 108px
-    transform: translate(78px, 266px)
-    animation: circleUser5 11s linear infinite
+    transform: translate(78px, 248px)
+    animation: circleUser5 25s linear infinite
 
 .circle-user:nth-child(6)
-    transform: translate(-250px, 100px)
-    animation: circleUser6 11s linear infinite
+    transform: translate(-235px, 100px)
+    animation: circleUser6 25s linear infinite
 
 .circle-user:hover
     padding: 5px
+
 .circle-users__item:hover .circle-user
     animation-play-state: paused
 
@@ -2424,9 +2468,9 @@ body.theme--ligth
 
 @keyframes circleUser2
     from
-        transform: rotate(0deg) translate(-40px, -211px) rotate(0deg)
+        transform: rotate(0deg) translate(-40px, --217px) rotate(0deg)
     to
-        transform: rotate(360deg) translate(-40px, -211px) rotate(-360deg)
+        transform: rotate(360deg) translate(-40px, --217px) rotate(-360deg)
 
 @keyframes circleUser3
     from
@@ -2436,21 +2480,21 @@ body.theme--ligth
 
 @keyframes circleUser4
     from
-        transform: rotate(0deg) translate(248px, 120px) rotate(0deg)
+        transform: rotate(0deg) translate(240px, 95px) rotate(0deg)
     to
-        transform: rotate(360deg) translate(248px, 120px) rotate(-360deg)
+        transform: rotate(360deg) translate(240px, 95px) rotate(-360deg)
 
 @keyframes circleUser5
     from
-        transform: rotate(0deg) translate(78px, 266px) rotate(0deg)
+        transform: rotate(0deg) translate(78px, 248px) rotate(0deg)
     to
-        transform: rotate(360deg) translate(78px, 266px) rotate(-360deg)
+        transform: rotate(360deg) translate(78px, 248px) rotate(-360deg)
 
 @keyframes circleUser6
     from
-        transform: rotate(0deg) translate(-250px, 100px) rotate(0deg)
+        transform: rotate(0deg) translate(-235px, 100px) rotate(0deg)
     to
-        transform: rotate(360deg) translate(-250px, 100px) rotate(-360deg)
+        transform: rotate(360deg) translate(-235px, 100px) rotate(-360deg)
 //features end
 
 //monetization start
@@ -2518,13 +2562,15 @@ body.theme--ligth .advantages__item:hover
 .ease-use
     padding: 140px 0
     position: relative
-    .block__inner
-        justify-content: space-around
     .block__content
         position: relative
         z-index: 3
     .block__text
         max-width: 360px
+    .slider-cards__arrow
+        margin-left: 63px
+    .slider-cards
+        bottom: 26px
 
 #ease-use-surfase
     top: -90px
@@ -2544,18 +2590,23 @@ body.theme--ligth .lifecycle-img::before
         position: absolute
         right: -13px
         top: 0
+        width: 848px
+        height: 533px
         z-index: 2
         &::before
             position: absolute
             content: ""
             background-color: rgba(#fff, 0.1)
             left: -27px
-            bottom: -30px
+            bottom: 60px
             width: 918px
-            height: 530px
+            height: 433px
             border-radius: 20px
             z-index: -1
         img
+            border-radius: 20px
+        object
+            width: 100%
             border-radius: 20px
 
 #lifecycle-surfaces
@@ -2601,6 +2652,9 @@ body.theme--ligth .money-transfer__box-content::after
         font-size: 16px
         line-height: 28px
         position: relative
+
+        animation: 1.5s fadeInUp linear infinite
+
         &::before,
         &::after
             content: ''
@@ -2618,6 +2672,16 @@ body.theme--ligth .money-transfer__box-content::after
             height: 18px
             left: 10px
             top: 8px
+    svg
+        animation-duration: 2.5s
+
+@keyframes fadeInUp
+    0%
+        opacity: 0
+        transform: translate3d(0,0%,0)
+    to
+        opacity: 1
+        transform: translateY(-35px)
 
 .money-transfer__box-1
     top: 400px
@@ -2655,6 +2719,24 @@ body.theme--ligth .data-analysis-card__heading
     .block__text
         text-align: center
         max-width: 740px
+    &__inner
+        position: relative
+        display: inline-flex
+    &__slider
+        animation: scroll 10s linear infinite
+        display: inline-flex
+        &:hover
+            animation-play-state: paused
+
+// @keyframes marqueeAnimationCard
+//     to
+//         transform: translateX(-100%)
+@keyframes scroll
+    0%
+        transform: translate(0,0)
+    100%
+        transform: translate(-100%,0)
+
 .data-analysis-card
     padding: 30px 30px 35px
     box-shadow: 0px 8px 8px rgba(156, 66, 245, 0.122)
@@ -2806,6 +2888,7 @@ body.theme--ligth .affiliate__inner
             opacity: 0
     &-heading
         width: 230px
+        font-weight: 600
 //affiliate end
 //features-cont start
 .features-cont
@@ -3072,11 +3155,16 @@ body.theme--ligth .ambassadors-wrap
         max-width: 312px
     .card__text
         width: 250px
+.block-slider__inner
+    justify-content: space-evenly
+.slider-cards__arrow
+    margin-left: 95px
 .slider-cards
     max-width: 600px
     width: 100%
     position: absolute
     left: 0
+    bottom: -54px
     .card
         transform: translateX(202px)
         margin: 20px 20px 37px
@@ -3345,6 +3433,7 @@ body.theme--ligth .circle
         display: flex
         flex-wrap: wrap
         align-items: flex-start
+        justify-content: space-between
 body.theme--ligth
     .ambassadors-steps-item__title::before
         background: $greyLight
@@ -3510,16 +3599,15 @@ body.theme--ligth
     flex-direction: column
     background-color: var(--color-bg)
     min-height: 72px
-    margin-bottom: 140px
+    margin-bottom: 110px
 
 .marquee
-    margin-top: 50px
     overflow: hidden
 
     &__track
         position: relative
         display: inline-flex
-        animation: marqueeAnimation 10s linear infinite
+        animation: marqueeAnimation 20s linear infinite
 
 @keyframes marqueeAnimation
     to
@@ -3622,9 +3710,11 @@ body.theme--ligth
     padding-bottom: 60px
     .block__inner
         align-items: center
+        justify-content: flex-start
 
     .block__content
         max-width: 320px
+        margin-left: 120px
     &__img
         border-radius: 20px
         overflow: hidden
