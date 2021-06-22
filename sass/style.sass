@@ -2252,12 +2252,12 @@ body.theme--ligth .pricing-item__li::before
         margin-right: 40px
     &__heading
         font-weight: 600
-        color: var(--color-bg)
+        color: #fff
     &__text
         font-weight: 500
         font-size: 16px
         line-height: 24px
-        color: var(--color-bg)
+        color: #fff
 
 .events-advantages
     padding-bottom: 100px
@@ -2412,7 +2412,7 @@ body.theme--ligth
     animation: circleUser1 25s linear infinite
 
 .circle-user:nth-child(2)
-    transform: translate(-40px, -217px)
+    transform: translate(0px, -217px)
     animation: circleUser2 25s linear infinite
 
 .circle-user:nth-child(3)
@@ -2426,7 +2426,7 @@ body.theme--ligth
 .circle-user:nth-child(5)
     width: 108px
     height: 108px
-    transform: translate(78px, 248px)
+    transform: translate(23px, 250px)
     animation: circleUser5 25s linear infinite
 
 .circle-user:nth-child(6)
@@ -2469,9 +2469,9 @@ body.theme--ligth
 
 @keyframes circleUser2
     from
-        transform: rotate(0deg) translate(-40px, --217px) rotate(0deg)
+        transform: rotate(0deg) translate(0px, -217px) rotate(0deg)
     to
-        transform: rotate(360deg) translate(-40px, --217px) rotate(-360deg)
+        transform: rotate(360deg) translate(0px, -217px) rotate(-360deg)
 
 @keyframes circleUser3
     from
@@ -2487,9 +2487,9 @@ body.theme--ligth
 
 @keyframes circleUser5
     from
-        transform: rotate(0deg) translate(78px, 248px) rotate(0deg)
+        transform: rotate(0deg) translate(23px, 250px) rotate(0deg)
     to
-        transform: rotate(360deg) translate(78px, 248px) rotate(-360deg)
+        transform: rotate(360deg) translate(23px, 250px) rotate(-360deg)
 
 @keyframes circleUser6
     from
@@ -2569,7 +2569,7 @@ body.theme--ligth .advantages__item:hover
     .block__text
         max-width: 360px
     .slider-cards__arrow
-        margin-left: 63px
+        margin-left: 176px
     .slider-cards
         bottom: 26px
 
@@ -2587,27 +2587,32 @@ body.theme--ligth .lifecycle-img::before
     position: relative
     overflow: hidden
     padding: 81px 0 210px
+    .block__text
+        max-width: 300px
     &-img
         position: absolute
         right: -13px
         top: 0
-        width: 848px
-        height: 533px
+        max-width: 848px
+        max-height: 533px
+        height: 100%
+        width: 100%
         z-index: 2
         &::before
             position: absolute
             content: ""
             background-color: rgba(#fff, 0.1)
             left: -27px
-            bottom: 60px
+            bottom: -20px
             width: 918px
-            height: 433px
+            height: 100%
             border-radius: 20px
             z-index: -1
         img
             border-radius: 20px
         object
             width: 100%
+            height: 100%
             border-radius: 20px
 
 #lifecycle-surfaces
@@ -2720,23 +2725,23 @@ body.theme--ligth .data-analysis-card__heading
     .block__text
         text-align: center
         max-width: 740px
+    &__line
+        display: flex
+        flex-direction: column
     &__inner
         position: relative
         display: inline-flex
     &__slider
-        animation: scroll 10s linear infinite
         display: inline-flex
+    .marquee__track
         &:hover
             animation-play-state: paused
 
-// @keyframes marqueeAnimationCard
-//     to
-//         transform: translateX(-100%)
-@keyframes scroll
-    0%
-        transform: translate(0,0)
-    100%
-        transform: translate(-100%,0)
+// @keyframes scroll
+//     0%
+//         transform: translate(100%,0)
+//     100%
+//         transform: translate(-100%,0)
 
 .data-analysis-card
     padding: 30px 30px 35px
@@ -3159,7 +3164,7 @@ body.theme--ligth .ambassadors-wrap
 .block-slider__inner
     justify-content: space-evenly
 .slider-cards__arrow
-    margin-left: 95px
+    margin-left: 214px
 .slider-cards
     max-width: 600px
     width: 100%
@@ -3546,54 +3551,6 @@ body.theme--ligth
     &__inner
         display: flex
         margin-bottom: 130px
-// .marquee
-//     margin-bottom: 140px
-//     width: 100%
-//     height: 72px
-//     animation-delay: 2s
-//     z-index: 3
-//     position: relative
-//     font-weight: 800
-//     font-size: 72px
-//     line-height: 72px
-//     letter-spacing: -0.05em
-
-//     &__link
-//         color: var(--color-bg)
-//         text-shadow: var(--box-shadow)
-//         position: relative
-//         padding-left: 90px
-//         filter: drop-shadow(5px 5px 20px rgba(9, 13, 20, 0.4))
-//         margin: 20px auto
-//         transition: all .3s
-//         background-position: 100%
-//         // &:hover
-//         //     background: linear-gradient(90deg, rgba(45, 47, 51, 0) 22.49%, #E83F83 34.79%, #9A41F3 47.56%, #17AAFE 55.91%, #9A41F3 63.69%, #E83F83 74.78%, rgba(33, 36, 41, 0) 87.01%)
-//         //     -webkit-background-clip: text
-//         //     -webkit-text-fill-color: transparent
-//         //     background-size: 105% 100%
-//         //     background-position: 0 100%
-//         //     &::before
-//         //         background-size: 105% 100%
-//         //         background-position: 0 100%
-//         //         background: linear-gradient(90deg, rgba(45, 47, 51, 0) 22.49%, #E83F83 34.79%, #9A41F3 47.56%, #17AAFE 55.91%, #9A41F3 63.69%, #E83F83 74.78%, rgba(33, 36, 41, 0) 87.01%)
-//         //         -webkit-background-clip: text
-//         //         -webkit-text-fill-color: transparent
-
-//         &::before
-//             content: "*"
-//             position: absolute
-//             left: 25px
-//             top: 27px
-//             color: var(--color-bg)
-//             text-shadow: var(--box-shadow)
-//             background-size: 200% 100%
-//             background-position: 100%
-//             transition: all .3s
-
-// .js-marquee-wrapper
-//     &:hover
-//         animation-play-state: paused !important
 
 .page
     display: flex

@@ -884,7 +884,8 @@
 	.header__menu-list.has-dropdown.opened
 		background: transparent
 		padding-top: 0
-
+	.partners__slider-arrows
+		margin-left: 0
 	.header__menu-list.has-dropdown ul
 		background: transparent
 		position: relative
@@ -904,6 +905,8 @@
 		line-height: 52px
 	.block__content, .block__text
 		max-width: none
+	.slider-cards__arrow
+		margin-left: 0
 
 	body.opened-menu
 		overflow-y: hidden
@@ -1494,8 +1497,12 @@
 			margin-top: 20px
 			&-glitch
 				background-size: contain
+				position: relative
 				&:before, &:after
-					display: none
+					top: 30px
+					left: 30px
+					width: 66%
+					height: 76%
 	.make-money
 		text-align: center
 		.select-btn .btn-arrow
@@ -1890,6 +1897,15 @@
 			&__text
 				margin-top: 30px
 				margin-bottom: 30px
+	.affiliate-ambassadors__slider .affiliate__slide
+		text-align: left
+		.card__supheading
+			margin-bottom: 15px
+		.affiliate__slide-heading
+			width: 160px
+	.affiliate__slide
+		padding: 25px 25px 30px
+
 	.shape-events
 		position: relative
 		margin: 0
@@ -1906,6 +1922,10 @@
 			top: 0
 			right: 0
 			background-image: url('../images/surface4.png')
+		.container
+			padding: 0
+		.block__content
+			padding: 0 10px
 		.block__inner
 			flex-direction: column-reverse
 			.slider-cards
@@ -2531,6 +2551,8 @@
 				font-weight: 500
 				font-size: 14px
 				line-height: 20px
+				text-align: center
+				min-height: 160px
 				&:before
 					width: 20px
 					height: 18px
@@ -2622,8 +2644,11 @@
 				padding: 30px 20px
 		.slider-cards__arrow
 			margin-bottom: 20px
+			margin-left: 0
 		.select-btn
 			margin-top: 25px
+	.slider-cards .card.slick-slide.slick-active.slick-current
+		margin-right: 5px
 	.lifecycle
 		padding-top: 0
 		text-align: center
@@ -2633,7 +2658,8 @@
 			&__heading
 				margin-bottom: 30px
 			&__text
-				margin-bottom: 50px
+				max-width: 390px
+				margin: 0 auto 50px
 		&-img
 			position: static
 			transform: translateX(30px)
@@ -2687,6 +2713,7 @@
 		text-align: center
 	.support
 		text-align: center
+		padding-bottom: 80px
 		.block
 			&__inner
 				flex-direction: column-reverse
@@ -2698,6 +2725,10 @@
 			margin-right: 0
 			margin-top: 50px
 			border-radius: 10px
+			img
+				margin: 0 auto
+				border-radius: 20px
+
 	.test-features
 		padding: 80px 0
 		text-align: center
@@ -2912,6 +2943,9 @@
 		height: auto
 
 @media (max-width: 640px)
+
+	.partners__item
+		margin-right: 60px
 
 	.carusel__item
 		width: 220px
@@ -3130,8 +3164,22 @@
 	.slider-cards .card,
 	.affiliate-ambassador-item__list-slider li
 		margin: 20px 5px
+	.money-transfer
+		padding: 80px 0 230px
+		#bottom-surfaces
+			display: block
+			width: 250px
 
 @media (max-width: 450px)
+	.lifecycle-img
+		margin-top: 60px
+		max-height: 100%
+		height: 274px
+		max-width: 130%
+		width: 436px
+		transform: translateX(10px)
+		object
+			border-radius: 10px
 	.interested-card
 		top: -50px
 	.money-transfer__box-1
@@ -3141,9 +3189,15 @@
 		bottom: -280px
 		left: 0
 	.money-transfer__box-3
-		top: 440px
-		right: 10px
+		top: 480px
+		right: -40px
+		.money-transfer__box-content
+			top: 18px
+		svg
+			width: 24px
+
 	.money-transfer
+		padding: 80px 0 330px
 		background-position: center 540px
 	#ambassadors-inside-surfaces
 		left: 45px
@@ -3176,6 +3230,11 @@
 	.money-transfer__box-1, .money-transfer__box-4, .money-transfer__box-3
 		transform: scale(.8)
 
+	.money-transfer
+		padding: 80px 0 250px
+	.money-transfer #bottom-surfaces
+		width: 220px
+
 @media (max-width: 370px)
 	body.theme--ligth
 		.logo svg path
@@ -3193,7 +3252,16 @@
 
 @media (max-width: 330px)
 	.money-transfer__box-1, .money-transfer__box-4, .money-transfer__box-3
-		display: none
+		transform: scale(0.7)
+	.money-transfer__box-1
+		top: 490px
+		left: -55px
+	.money-transfer__box-4
+		bottom: -208px
+		left: 60px
+
+	.money-transfer
+		padding: 40px 0 200px
 
 @media(max-width: 768px) and (max-height: 480px)
 	.mobile-menu__inner

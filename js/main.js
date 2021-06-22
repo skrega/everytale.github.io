@@ -495,7 +495,7 @@ $(function () {
                 breakpoint: 650,
                 settings: {
                     slidesToShow: 1,
-
+                    centerMode: true
                 }
             },
 
