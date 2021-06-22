@@ -53,7 +53,7 @@ body.theme--ligth
         pointer-events: none
 
 .header__menu-list.has-dropdown
-    padding-right: 50px
+    padding-right: 30px
     margin-right: 10px
     cursor: pointer
     border-top-right-radius: 8px
@@ -75,8 +75,8 @@ body.theme--ligth
             background-repeat: no-repeat
             background-size: contain
             transition: .2s
-            &.opened > span:after
-                transform: rotate(180deg)
+    &.opened > span:after
+        transform: rotate(180deg)
     &.opened
         background: #40424B
         padding-top: 8px
@@ -89,7 +89,14 @@ body.theme--ligth
         background: #40424B
         border-bottom-left-radius: 8px
         border-bottom-right-radius: 8px
+    li
+        margin-top: 5px
+        font-size: 15px
 
+        transition: all .3s
+
+        &:hover
+            color: rgba(#fff, 0.4 )
 body.theme--ligth
     .lang-switcher.active
         background: #ECECF9
@@ -102,6 +109,7 @@ body.theme--ligth
     position: relative
     padding: 14px 27px 10px 20px
     height: 100%
+    cursor: pointer
     &::before
         content: ""
         position: absolute
@@ -167,17 +175,77 @@ body.theme--ligth .broadcast__img
     img
         width: 100%
         height: 100%
+.surface
+    width: 100%
+    height: 100%
 
 .scene
     position: absolute
-    top: -180px
-    right: 110px
+    top: 0px
+    right: 0px
     padding-left: 40px
     padding-bottom: 20px
-    overflow: hidden
+    width: 100%
+    height: 100%
 
-.broadcast__surface_top
-    margin-left: auto
+.surface svg
+    position: absolute
+
+.promo-surface__top svg
+    top: -85%
+    right: 0
+
+.promo-surface__purple svg
+    bottom: -14%
+    right: 22%
+
+.promo-surface__orange svg
+    bottom: 20%
+    right: 49%
+
+.surface-top-purple svg
+    top: -10px
+    bottom: -88px
+
+.surface-top-orange svg
+    top: 3%
+    left: 37%
+
+.surface-bottom-purple svg
+    bottom: -10%
+    right: 25%
+
+.surface-banner-purple svg
+    bottom: -33%
+    left: 40%
+
+.surface-banner-orange svg
+    top: 8%
+    left: -1%
+.surface-orange_big svg
+    top: 6%
+    left: -11%
+
+.surface-purple_small svg
+    top: 40%
+    left: 6%
+
+.surface-bottom-orange svg
+    bottom: -44%
+    right: 25%
+
+.surface-bottom-purple__small svg
+    bottom: -16%
+    right: 6%
+
+.surface-bottom-orange__small svg
+    bottom: 10%
+    right: -4%
+
+.surface-banner-orange_big svg
+    right: -4%
+    top: 4%
+    z-index: 1
 
 #broadcast-paralax_orange
     position: absolute
@@ -220,6 +288,8 @@ body.theme--ligth .broadcast__img
     &__content
         max-width: 560px
         width: 100%
+        position: relative
+        z-index: 3
     &__text
         margin: 50px 0 62px
         max-width: 360px
@@ -253,6 +323,7 @@ body.theme--ligth .broadcast__img
         max-width: 460px
         width: 100%
         margin-bottom: 60px
+        font-weight: 500
         color: var(--color-text)
     &__subtext
         margin-bottom: 45px
@@ -1052,7 +1123,7 @@ body.theme--ligth .form__date::before
         outline: none
         display: block
         &::placeholder
-            color: #fff
+            color: var(--color-title)
     &__privacy
         font-weight: 500
         font-size: 14px
@@ -1088,7 +1159,7 @@ body.theme--ligth .form__date::before
     padding: 14px 20px
     border: none
     border-bottom-color: transparent
-    background: var(--seletc-bg)
+    background: rgba(#E0E0FF, 0.1)
     box-shadow: none
     font: inherit
     color: #fff
@@ -1096,7 +1167,7 @@ body.theme--ligth .form__date::before
     transition: all .3s
     &:hover,
     &:focus
-        background: var(--seletc-bg-hover)
+        background: rgba(#E0E0FF, 0.16)
     &:active
         box-shadow: none
     &.error
@@ -1116,8 +1187,20 @@ body.theme--ligth .form__date::before
     height: 100%
     border-left: none
 
-body.theme--ligth .jq-selectbox__trigger-arrow
-    filter: invert(100%)
+body.theme--ligth
+    .jq-selectbox__select
+        background: #F3F3FC
+        &:hover,&:focus
+            background: #ECECF9
+    .jq-selectbox.opened .jq-selectbox__select
+        background: #ECECF9
+    .jq-selectbox li
+        color: $black
+        &:hover
+            background: rgba(#E0E0FF, 0.5)
+
+    .jq-selectbox__trigger-arrow
+        filter: invert(100%)
 
 .jq-selectbox__trigger-arrow
     position: absolute
@@ -1145,7 +1228,7 @@ body.theme--ligth .jq-selectbox__trigger-arrow
     border-radius: 0px
     border-bottom-left-radius: 8px
     border-bottom-right-radius: 8px
-    background: #40424B
+    background: var(--select-dropdown)
     box-shadow: none
     font: inherit
     font-weight: 500
@@ -1645,8 +1728,10 @@ body.theme--ligth .property__item
 //property end
 //advanced start
 #advanced-surfaces
-    top: -50px
-    right: -110px
+    top: -87%
+    right: -31%
+    transform: rotate(-150deg) !important
+
 body.theme--ligth
     .advanced-tab
         background-color: $greyLight
@@ -1686,6 +1771,9 @@ body.theme--ligth
         width: 100%
     .info-block__subtext
         margin-bottom: 45px
+    .block__inner
+        position: relative
+        z-index: 2
 
 .advanced-tabs
     .tab-item
@@ -1954,11 +2042,23 @@ body.theme--ligth .pricing-item__li::before
 //plan start
 .plan
     padding-top: 140px
-    overflow: hidden
+    .top-surfaces
+        top: 60px
+    .surface-left-orange svg
+        top: -23%
+        left: 12%
+
 .top-surfaces
-    top: -90px
-    left: -70px
     z-index: -1
+
+.surface-left-purple svg
+    top: -8%
+    left: -8%
+
+.surface-left-orange svg
+    top: -13%
+    left: 20%
+
 //plan end
 
 //free-subscription start
@@ -2111,20 +2211,22 @@ body.theme--ligth .pricing-item__li::before
     padding-top: 140px
     padding-bottom: 107px
     overflow: hidden
-    .block__content
+    .block__inner
         position: relative
         z-index: 3
+    .block__text
+        max-width: 440px
 #three-surfaces
-    right: -20px
-    bottom: -80px
     z-index: 1
-
-.save-costs-surfases
-    top: -320px
-    right: -60px
+    .surface-banner-orange svg
+        top: 24%
+    .surface-banner-purple svg
+        bottom: -21%
+        left: 35%
 
 //setup start
-
+.save-costs-surfases
+    height: 132%
 .step-number
     width: 333px
     height: 333px
@@ -2356,8 +2458,9 @@ body.theme--ligth .event-arrow
         justify-content: center
 
 #features-surfases
-    left: -50px
-    top: -50px
+    left: -123px
+    top: -100px
+
 body.theme--ligth
     .circle-users
         &::before,
@@ -2580,6 +2683,13 @@ body.theme--ligth .advantages__item:hover
 //ease-use end
 
 //lifecycle start
+.surface-right-bottom-purple__small svg
+    bottom: -22%
+    left: 7%
+
+.surface-right-bottom-orange__small svg
+    left: -2%
+    bottom: 12%
 body.theme--ligth .lifecycle-img::before
     background-color: $white
 
@@ -2709,10 +2819,6 @@ body.theme--ligth .money-transfer__box-content::after
     bottom: -328px
     right: 240px
 
-.bottom-surfaces
-    right: -50px
-    bottom: -100px
-
 //money-transfer end
 
 //data-analysis start
@@ -2779,6 +2885,9 @@ body.theme--ligth .data-analysis-card__heading
     padding: 90px 0 107px
     position: relative
     overflow: hidden
+    .block__inner
+        z-index: 2
+        position: relative
     .block__content
         max-width: 490px
         z-index: 2
@@ -2787,10 +2896,12 @@ body.theme--ligth .data-analysis-card__heading
     &__img
         max-width: 600px
         width: 100%
+    .surface-banner-orange_big svg
+        right: -5%
+        top: -12%
 
 #test-features-surfases
-    bottom: -110px
-    left: 110px
+    bottom: 0px
     z-index: 1
 
 //test-features end
@@ -3481,6 +3592,14 @@ body.theme--ligth
         margin-top: 15px
 //ambassadors-steps end
 //interested start
+#interested-top-surfaces
+    .surface-left-orange svg
+        top: -11%
+        left: 14%
+    .surface-left-purple svg
+        top: -3%
+        left: -5%
+
 .interested
     position: relative
     padding: 150px 0 140px
@@ -3770,10 +3889,6 @@ body.theme--ligth .loyalty-item
         width: 105px
         height: 105px
 
-#loyalty-surfases
-    left: -100px
-    top: 300px
-
 //loyalty end
 //why-lose start
 
@@ -3801,9 +3916,11 @@ body.theme--ligth .loyalty-item
         right: -70px
 
 #why-lose-surfases
-    left: -60px
-    top: -70px
+    padding-left: 0
     z-index: 1
+    left: -100px
+    top: -50px
+
 //why-lose end
 
 //the-more-the start

@@ -773,7 +773,7 @@ $(function () {
         },
         closeBtnInside: true
     });
-    $('.form__btn').magnificPopup({
+    $('#coming-up-btn').magnificPopup({
         items: {
             src: '#coming-up-continue',
             type: 'inline'
