@@ -232,7 +232,7 @@ $(function () {
     });
 
     // media queries
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 1041) {
         $('.header__btn-menu').click(function () {
             $('.mobile-menu').toggleClass('opened');
             $('.header__btn-menu').toggleClass('opened');
@@ -793,5 +793,25 @@ $(function () {
     $(".date").mask("99.99.9999", {
         placeholder: "mm/dd/yy"
     });
+
+
+
+    setInterval(function () {
+        $('.money-transfer__box-1').toggleClass('fadeIn');
+    }, 2000);
+
+    setInterval(function () {
+        $('.money-transfer__box-3').toggleClass('fadeIn');
+    }, 5000);
+
+    setInterval(function () {
+        $('.money-transfer__box-2').toggleClass('fadeIn');
+        $('.money-transfer__box-4').toggleClass('fadeIn');
+    }, 3000);
+
+    setInterval(function () {
+        $('.money-transfer__box-5').toggleClass('fadeIn');
+    }, 4000);
+
 
 })

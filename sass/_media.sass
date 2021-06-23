@@ -319,6 +319,160 @@
 		.contact-form
 			max-width: 600px
 @media(max-width: 1040px)
+	h1
+		font-size: 50px
+		line-height: 50px
+	.header__menu-list:not(:last-child)
+		margin-right: 0
+	.watch-now__slider
+		margin-top: 40px
+
+	.header__menu-list:not(:first-child)
+		margin-right: 0
+		margin-left: 0
+
+	.promo__text
+		margin: 40px 0 52px
+		font-size: 18px
+		line-height: 33px
+
+	body.theme--ligth .mobile-menu.opened
+		.logo svg path
+			fill: $purple
+	body.theme--ligth
+
+		.mobile-menu .header__menu-list.has-dropdown>span::after
+			filter: invert(100%)
+
+	.header__container--desktop
+		display: none !important
+	.header__container--mobile
+		justify-content: space-between
+		.square-btn
+			width: 46px
+			height: 46px
+		.header__btn-theme
+			margin-left: 0
+			margin-right: 0
+	.header__btn-menu
+		i
+			width: 14px
+			height: 2px
+			background: var(--color-title)
+			position: relative
+			border-radius: 2px
+			margin-bottom: 10px
+			transition: .1s
+			&:before, &:after
+				position: absolute
+				top: 6px
+				right: 0
+				content: ""
+				display: block
+				width: 14px
+				height: 2px
+				background: var(--color-title)
+				border-radius: 2px
+				transition: .1s
+			&:before
+				width: 10px
+			&:after
+				top: 12px
+		&.opened
+			i
+				width: 18px
+				transform: rotate(45deg)
+				margin-bottom: 0
+				&:before
+					display: none
+				&:after
+					width: 18px
+					top: 0
+					transform: rotate(90deg)
+
+	.mobile-menu
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: var(--color-bg)
+		z-index: 10
+		display: none
+		overflow-y: auto
+		&.opened
+			display: flex
+			flex-direction: column
+		&__header
+			width: 95%
+			padding-top: 25px
+			display: flex
+			align-items: center
+			margin: 0 auto
+			justify-content: space-between
+			flex-shrink: 0
+			.square-btn
+				width: 46px
+				height: 46px
+			.header__btn-theme
+				margin-left: 0
+				margin-right: 0
+				margin-bottom: 0
+			> *
+				margin-bottom: 5px
+		&__inner
+			text-align: center
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			padding: 45px 10px
+
+		.header
+			&__menu
+				display: block
+				margin-left: 0
+				margin-right: 0
+				&-list
+					margin-bottom: 12px
+					&:last-child
+						margin-bottom: 0
+					&.has-dropdown
+						> span
+							position: relative
+							padding-right: 20px
+							&:after
+								content: ""
+								display: block
+								position: absolute
+								top: 8px
+								right: 0
+								width: 9px
+								height: 6px
+								background-image: url('../images/icons/arrow.svg')
+								background-repeat: no-repeat
+								background-size: contain
+								transition: .2s
+						&.opened > span:after
+							transform: rotate(180deg)
+						ul
+							padding: 6px 0
+							display: none
+						li
+							list-style-type: none
+							font-size: 16px
+							line-height: 28px
+							margin: 8px 0
+							color: #909194
+		.lang-switcher
+			height: 115px
+		.select-btn
+			padding: 15px 33px 14px 33px
+			margin-top: 10px
+
+	.broadcast__img
+		right: 0
 	.map
 		margin-top: 50px
 		&__inner
@@ -354,7 +508,27 @@
 	#ambassadors-surfaces
 		transform: scale(.6)
 	.scene
-		width: 500px
+		width: 970px
+	.promo-surface__top svg
+		top: -105%
+		right: -20px
+	.promo-surface__purple svg
+		bottom: -14%
+		right: 2%
+		width: 220px
+	.partners__heading
+		max-width: 200px
+	.tab:not(:last-child)
+		margin-right: -10px
+	.surface-top-purple svg
+		top: -210px
+		width: 240px
+		left: -60px
+	.surface-banner-orange svg
+		top: 0px
+		left: -170px
+	.advantages__items
+		grid-gap: 0
 	.events-advantages .surface_bottom
 		top: 110px
 		left: 160px
@@ -608,6 +782,7 @@
 @media(max-width: 900px)
 	#ambassadors-surfaces
 		display: none
+
 	.top-surfaces
 		top: -240px
 	.monetize
@@ -755,7 +930,6 @@
 	.header
 		&__container
 			flex-wrap: wrap
-			justify-content: center
 			> *
 				margin-bottom: 5px
 		&__menu
@@ -865,7 +1039,7 @@
 			height: 225px
 	.ease-use .block__content
 		max-width: 310px
-@media(min-width: 769px)
+@media(min-width: 1041px)
 	.header__container--mobile, .mobile-menu
 		display: none !important
 
@@ -882,6 +1056,9 @@
 		line-height: 32px
 	p
 		line-height: 24px
+	.setup__slider .card-circle__icon.blue-bg
+		width: 30%
+
 	.header__menu-list.has-dropdown.opened
 		background: transparent
 		padding-top: 0
@@ -906,8 +1083,17 @@
 		line-height: 52px
 	.block__content, .block__text
 		max-width: none
+	.events-advantages__img
+		margin-right: 0
+		margin-top: 60px
 	.slider-cards__arrow
 		margin-left: 0
+	.features__wrap
+		padding-bottom: 255px
+	.availability__slider
+		bottom: -110px
+	.availability
+		margin-bottom: 276px
 
 	body.opened-menu
 		overflow-y: hidden
@@ -969,51 +1155,7 @@
 
 	.scene, #monetize-surfaces, #surface_bottom, #upload-surfase, #faq-surfaces, #loyalty-surfases, #why-lose-surfases, #top-surfaces, #interested-top-surfaces, #three-surfaces, #features-surfases, #sharability-surface, #test-features-surfases
 		display: none
-	.header__container--desktop
-		display: none !important
-	.header__container--mobile
-		justify-content: space-between
-		.square-btn
-			width: 46px
-			height: 46px
-		.header__btn-theme
-			margin-left: 0
-			margin-right: 0
-	.header__btn-menu
-		i
-			width: 14px
-			height: 2px
-			background: var(--color-title)
-			position: relative
-			border-radius: 2px
-			margin-bottom: 10px
-			transition: .1s
-			&:before, &:after
-				position: absolute
-				top: 6px
-				right: 0
-				content: ""
-				display: block
-				width: 14px
-				height: 2px
-				background: var(--color-title)
-				border-radius: 2px
-				transition: .1s
-			&:before
-				width: 10px
-			&:after
-				top: 12px
-		&.opened
-			i
-				width: 18px
-				transform: rotate(45deg)
-				margin-bottom: 0
-				&:before
-					display: none
-				&:after
-					width: 18px
-					top: 0
-					transform: rotate(90deg)
+
 	.promo
 		&__content
 			max-width: none !important
@@ -1393,94 +1535,7 @@
 			margin-top: 20px
 			.foter-col__heading
 				margin-bottom: 15px
-	body.theme--ligth .mobile-menu.opened
-		.logo svg path
-			fill: $purple
-	body.theme--ligth
 
-		.mobile-menu .header__menu-list.has-dropdown>span::after
-			filter: invert(100%)
-
-	.mobile-menu
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background: var(--color-bg)
-		z-index: 10
-		display: none
-		overflow-y: auto
-		&.opened
-			display: flex
-			flex-direction: column
-		&__header
-			width: 95%
-			padding-top: 25px
-			display: flex
-			align-items: center
-			margin: 0 auto
-			justify-content: space-between
-			flex-shrink: 0
-			.square-btn
-				width: 46px
-				height: 46px
-			.header__btn-theme
-				margin-left: 0
-				margin-right: 0
-				margin-bottom: 0
-			> *
-				margin-bottom: 5px
-		&__inner
-			text-align: center
-			height: 100%
-			display: flex
-			flex-direction: column
-			justify-content: space-between
-			align-items: center
-			padding: 45px 10px
-
-		.header
-			&__menu
-				display: block
-				margin-left: 0
-				margin-right: 0
-				&-list
-					margin-bottom: 12px
-					&:last-child
-						margin-bottom: 0
-					&.has-dropdown
-						> span
-							position: relative
-							padding-right: 20px
-							&:after
-								content: ""
-								display: block
-								position: absolute
-								top: 8px
-								right: 0
-								width: 9px
-								height: 6px
-								background-image: url('../images/icons/arrow.svg')
-								background-repeat: no-repeat
-								background-size: contain
-								transition: .2s
-						&.opened > span:after
-							transform: rotate(180deg)
-						ul
-							padding: 6px 0
-							display: none
-						li
-							list-style-type: none
-							font-size: 16px
-							line-height: 28px
-							margin: 8px 0
-							color: #909194
-		.lang-switcher
-			height: 115px
-		.select-btn
-			padding: 15px 33px 14px 33px
-			margin-top: 10px
 	.upload
 		margin-bottom: 40px
 		+ .watch-now
@@ -1920,7 +1975,7 @@
 			background-size: contain
 			width: 161px
 			height: 223px
-			top: 0
+			top: -70px
 			right: 0
 			background-image: url('../images/surface4.png')
 		.container
@@ -2369,6 +2424,8 @@
 			margin-right: 0
 			text-align: center
 			margin-top: 115px
+			width: 200px
+			margin: 120px auto 0
 	.live
 		padding: 40px 0 30px
 		&__step
@@ -2514,7 +2571,7 @@
 
 	.monetization
 		padding: 20px 0 620px
-		overflow-x: hidden
+		overflow: hidden
 		margin-bottom: 30px
 		&__wrapper
 			background-image: none !important
@@ -2534,18 +2591,20 @@
 				margin-bottom: 30px
 				padding-left: 15px
 				padding-right: 15px
+				text-align: center
 			&__text
 				max-width: none
 				margin-bottom: 40px
 				padding-left: 15px
 				padding-right: 15px
+				text-align: center
 			&-list__item
 				width: 260px
 				position: relative
 				background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
 				box-shadow: var(--box-shadow)
 				border-radius: 12px
-				padding: 70px 20px 30px
+				padding: 70px 40px 30px
 				overflow: hidden
 				display: block
 				margin: 25px 5px
@@ -2553,7 +2612,7 @@
 				font-size: 14px
 				line-height: 20px
 				text-align: center
-				min-height: 160px
+				min-height: 150px
 				&:before
 					width: 20px
 					height: 18px
@@ -2942,8 +3001,22 @@
 		min-height: 165px
 	.box-center__img
 		height: auto
+	.ambassadors__img
+		z-index: 3
+		position: relative
+
+	.ambassadors-inside-surfaces--mobile
+		display: block
+		position: absolute
+		top: 210px
+		left: 160px
 
 @media (max-width: 640px)
+	.ambassadors-inside-surfaces--mobile
+
+		top: 90px
+		left: 70px
+		z-index: 1
 
 	.partners__item
 		margin-right: 60px

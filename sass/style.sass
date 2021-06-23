@@ -51,6 +51,18 @@ body.theme--ligth
     &__btn.disabled
         opacity: 0.4
         pointer-events: none
+body.theme--ligth
+    .header__menu-list.has-dropdown
+        &.opened
+            background: #ECECF9
+            .header__menu-link
+                color: rgba(#212429, 0.4)
+            span:after
+                opacity: 0.4
+        ul
+            background: #ECECF9
+        span:after
+            filter: invert(100%)
 
 .header__menu-list.has-dropdown
     padding-right: 30px
@@ -2306,7 +2318,7 @@ body.theme--ligth .pricing-item__li::before
         margin-top: 90px
         margin-right: 200px
         text-align: right
-        color: var(--color-bg)
+        color: #fff
     &__slider
         bottom: -40px
         z-index: 1
@@ -2372,6 +2384,7 @@ body.theme--ligth .pricing-item__li::before
 .events-advantages__img
     max-width: 660px
     width: 100%
+    height: auto
     margin-right: -20px
 //live end
 //event start
@@ -2760,6 +2773,11 @@ body.theme--ligth .money-transfer__box-content::after
 
 .money-transfer__box
     position: absolute
+    &.animate
+        opacity: 0
+    &.animate.fadeIn
+        opacity: 1
+
     &-content
         margin-bottom: 10px
         padding: 5px 15px 5px 44px
@@ -2768,7 +2786,6 @@ body.theme--ligth .money-transfer__box-content::after
         font-size: 16px
         line-height: 28px
         position: relative
-
         animation: 1.5s fadeInUp linear infinite
 
         &::before,
@@ -2817,7 +2834,7 @@ body.theme--ligth .money-transfer__box-content::after
 
 .money-transfer__box-5
     bottom: -328px
-    right: 240px
+    right: 300px
 
 //money-transfer end
 
@@ -3231,9 +3248,12 @@ body.theme--ligth .btn-back
 //ambassadors
 body.theme--ligth .ambassadors-wrap
     background: #F3F3FC
+.ambassadors-wrap
+    background: linear-gradient(180deg, #171321 99.99%, rgba(23, 19, 33, 0) 100% )
 
 .ambassadors
     position: relative
+    padding-bottom: 40px
     &__img
         position: relative
         z-index: 2
@@ -3249,15 +3269,31 @@ body.theme--ligth .ambassadors-wrap
             top: 130px
 
 #ambassadors-inside-surfaces
-    top: 160px
-    left: 120px
     z-index: -1
+.ambassadors-inside-surface__orange svg
+    top: 18%
+    left: 20%
+
+.ambassadors-inside-surface__orange-small svg
+    filter: blur(8px)
+    bottom: 34%
+    right: 38%
+.ambassadors-surface__orange svg
+    bottom: 8%
+    right: 36%
+
+.ambassadors-surface__orange-small svg
+    bottom: 22%
+    right: -2%
+
+.ambassadors-surface__purple svg
+    bottom: -30%
+    right: 12%
 
 #ambassadors-surfaces
-    bottom: -270px
-    right: -20px
     z-index: 2
-
+.ambassadors-inside-surfaces--mobile
+    display: none
 //ambassadors
 //shape-events start
 .shape-events
