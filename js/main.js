@@ -474,7 +474,7 @@ $(function () {
         $('.partners-tabs .active-tab').children('.partners__slider').slick('slickPrev');
     });
     $('.partners__slider-arrow.slider-btn__right').click(function () {
-        $('.partners-tabs .active-tab').children('.data-analysis').slick('slickNext');
+        $('.partners-tabs .active-tab').children('.partners__slider').slick('slickNext');
     });
 
     $('.whom__slider').slick({
