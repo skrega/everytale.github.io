@@ -523,9 +523,7 @@ body.theme--ligth .map
 
 .map__inner-user:hover
     padding: 5px
-    img
-        width: 110%
-        height: 110%
+
 .map__inner-middle
     display: flex
     justify-content: space-between
@@ -538,16 +536,66 @@ body.theme--ligth .map
         height: 142px
         background-color: $purple
         position: relative
+        position: absolute
+        left: 0
     & .map__inner-user:nth-child(2)
         width: 115px
         height: 115px
         background-color: $blue
         box-shadow: 0px 8px 15px rgba(66, 105, 245, 0.3)
+        position: absolute
+        left: 40%
 
     & .map__inner-user:nth-child(3)
         width: 141px
         height: 141px
         box-shadow: 0px 8px 15px rgba(245, 109, 66, 0.3)
+        position: absolute
+        right: 0
+
+.user.blue-bg
+    width: 115px
+    height: 115px
+    &:hover
+        width: 120px
+        height: 120px
+
+.user.pink-bg
+    width: 74px
+    height: 74px
+    &:hover
+        width: 80px
+        height: 80px
+
+.user.white-bg
+    width: 124px
+    height: 124px
+    background-color: rgba(#FFFFFF, 0.2)
+    &:hover
+        width: 130px
+        height: 130px
+
+.user.purple-bg
+    width: 142px
+    height: 142px
+    &:hover
+        width: 147px
+        height: 147px
+
+.user.orange-bg
+    width: 141px
+    height: 141px
+    &:hover
+        width: 146px
+        height: 146px
+
+.user.grey-bg
+    width: 141px
+    height: 141px
+    background-color: rgba(#fff, 0.1)
+    &:hover
+        width: 146px
+        height: 146px
 
 .map__inner-bottom .map__inner-user
     position: absolute
