@@ -232,6 +232,29 @@ $(function () {
     });
 
     // media queries
+    if ($(window).width() <= 769) {
+        if ($('.advantages__items').length > 0) {
+            $('.advantages__items').slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                arrows: false
+            });
+        }
+        if ($('.features').length > 0) {
+            $('.features .block-list, .monetization .block-list').slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                arrows: false,
+
+            });
+        }
+    }
     if ($(window).width() <= 1041) {
         $('.header__btn-menu').click(function () {
             $('.mobile-menu').toggleClass('opened');
@@ -245,16 +268,7 @@ $(function () {
         if ($('.advantages__link').length > 0) {
             $('.advantages__link').appendTo($('.advantages__link').closest('.advantages__inner'));
         }
-        if ($('.advantages__items').length > 0) {
-            $('.advantages__items').slick({
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                arrows: false
-            });
-        }
+
         if ($('.map__items').length > 0) {
             $('.map__items').slick({
                 infinite: true,
@@ -392,21 +406,11 @@ $(function () {
         if ($('.live').length > 0) {
             $('.live .select-btn').insertBefore($('.live .live__items'));
         }
-        if ($('.features').length > 0) {
-            $('.features .block-list, .monetization .block-list').slick({
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                arrows: false,
 
-            });
-        }
-        if ($('.ease-use').length > 0) {
-            $('.ease-use .slider-cards__arrow').insertAfter('.ease-use .slider-cards');
-            $('.ease-use .select-btn').insertBefore('.ease-use .slider-cards');
-        }
+        // if ($('.ease-use').length > 0) {
+        //     $('.ease-use .slider-cards__arrow').insertAfter('.ease-use .slider-cards');
+        //     $('.ease-use .select-btn').insertBefore('.ease-use .slider-cards');
+        // }
         if ($('.blog').length > 0) {
             $('.blog-tabs > .tabs').slick({
                 infinite: false,
@@ -665,7 +669,7 @@ $(function () {
                 breakpoint: 1441,
                 settings: {
                     slidesToShow: 1,
-                    centerMode: true
+                    centerMode: false
                 }
             }]
         });

@@ -1,3 +1,8 @@
+@media (max-width: 1600px)
+	.monetization
+		max-width: 89%
+		padding-bottom: 120px
+
 @media (max-width: 1440px)
 	// .step-slider .card
 	// 	transform: translateX(35px)
@@ -5,13 +10,14 @@
 		max-width: 640px
 	.slider-cards .card
 		transform: translate(280px)
-	.affiliate-ambassadors-testimonials
-		.affiliate__slide
-			transform: translate(-531px)
+
 	.step-slider .card
 		transform: translateX(16px)
 	.monetization__img
 		top: -40px
+	.monetization
+		background-size: contain
+		max-width: 1330px
 
 @media(max-width: 1380px)
 	.header__container
@@ -94,6 +100,14 @@
 		justify-content: space-between
 	#lifecycle-surfaces
 		left: -115px
+
+	.monetization
+		max-width: 1230px
+		width: 96%
+
+	.monetization__inner
+		height: 533px
+
 @media(max-width: 1200px)
 
 	.interested__cards
@@ -165,11 +179,12 @@
 				margin-left: 15px
 	.foter-col:not(:last-child)
 		margin-right: 25px
-	.affiliate
-		&__slider
-			max-width: 500px
-		&__slide
-			width: 300px
+
+	.affiliate__inner
+		padding: 60px 0 0 70px
+	.affiliate-items
+		max-width: 450px
+
 	.loyalty
 		margin-top: 270px
 		padding-top: 0
@@ -189,8 +204,7 @@
 		margin: 0 10px
 
 	.shape-events
-		.slider-cards
-			max-width: 560px
+
 		.block__content
 			max-width: 380px
 
@@ -236,7 +250,6 @@
 		width: 240px
 	.monetization__img
 		max-width: 500px
-		top: -170px
 	.blog
 		.blog
 			&__card
@@ -256,6 +269,7 @@
 			&-list:not(:last-child)
 				margin-left: 15px
 				margin-right: 15px
+
 	.make-money
 		.block__inner
 			flex-direction: column
@@ -329,6 +343,18 @@
 	h1
 		font-size: 50px
 		line-height: 50px
+
+	.advantages__items
+		grid-gap: 10px
+
+	.monetization__inner
+		height: 322px
+	.monetization
+		max-width: 100%
+		width: 100%
+	.monetization__img
+		top: -150px
+
 	.footer__bottom-inner
 		flex-wrap: wrap
 		justify-content: center
@@ -363,8 +389,6 @@
 		display: none
 	.block-slider__inner
 		justify-content: space-between
-	.slider-cards__arrow
-		margin-left: 380px
 	.surface-left-purple svg
 		width: 250px
 	.compensation
@@ -609,10 +633,13 @@
 		&__box-5
 			display: none
 	.ease-use .slider-cards
-		max-width: 450px
+		bottom: -160px
+
 	.ease-use .card
 		width: 270px
-		transform: translateX(160px)
+		transform: translateX(-90px)
+		margin: 20px 10px 37px
+
 	#features-surfases img
 		width: 400px
 	.monetization
@@ -621,6 +648,7 @@
 		margin-bottom: 80px
 	.sharability
 		padding-bottom: 80px
+		padding-top: 118px
 	.ease-use
 		padding: 100px 0
 	.lifecycle
@@ -630,6 +658,19 @@
 	.data-analysis
 		padding-top: 80px
 @media(max-width: 980px)
+	.monetization
+		background-size: 0
+	.gamification-engagement
+		.block__inner
+			flex-direction: column
+			align-items: center
+		.block__content
+			margin-right: 0
+			max-width: 100%
+			text-align: center
+			margin-bottom: 60px
+		.block__text
+			margin: 0 auto 60px
 	.setup .container
 		padding: 0
 
@@ -1106,6 +1147,7 @@
 			height: 225px
 	.ease-use .block__content
 		max-width: 310px
+
 @media(min-width: 1041px)
 	.header__container--mobile, .mobile-menu
 		display: none !important
@@ -1123,6 +1165,15 @@
 		line-height: 32px
 	p
 		line-height: 24px
+	.block-slider__inner
+		flex-direction: column-reverse
+	.slider__container .block__content
+		margin-left: 0
+	.slider__inner
+		max-width: 100%
+		overflow: hidden
+	.sharability .block__content
+		margin-left: 0
 	.setup__slider .card-circle__icon.blue-bg
 		width: 30%
 	.step-slider .card
@@ -1154,8 +1205,7 @@
 	.events-advantages__img
 		margin-right: 0
 		margin-top: 60px
-	.slider-cards__arrow
-		margin-left: 0
+
 	.features__wrap
 		padding-bottom: 255px
 
@@ -1819,8 +1869,11 @@
 	.why-map--mob
 		width: 100%
 		margin-top: 20px
-
+	.affiliate-ambassadors
+		.container
+			padding: 0 0
 	.affiliate
+
 		&-ambassadors
 			text-align: center
 		&-user, &-items
@@ -1830,11 +1883,16 @@
 			padding-left: 20px
 			padding-right: 20px
 			background: none
+			box-shadow: none
+			height: auto
 		&__heading
 			margin-bottom: 40px
+		&__content
+			padding: 0
 		&__slider
 			max-width: none
 			width: 100%
+			position: static
 			.slick-track
 				display: flex
 		&__slide
@@ -1905,11 +1963,21 @@
 		&-item
 			width: 260px
 			padding: 30px 20px 50px
-			margin-left: 15px
-			margin-right: 15px
+			margin-left: 5px
+			margin-right: 5px
 			margin-top: 70px
-
 			height: inherit
+			&.slick-active
+				background: rgba(224,224,255,0.2)
+				box-shadow: 8px 8px 24px rgba(9, 13, 20, 0.4)
+				&::before
+					width: 169px
+					height: 169px
+					animation: ball1 0.7s ease-out
+				&::after
+					animation: ball2 0.7s ease-out
+					animation-fill-mode: forwards
+
 		&__items
 			display: block
 	body.theme--ligth .why-lose
@@ -2074,9 +2142,8 @@
 						height: 60px
 					&__heading
 						color: var(--color-title)
-
-			.block__content, .block__text
-				max-width: none
+		.block__content, .block__text
+			max-width: none
 			.select-btn
 				margin-top: 40px
 
@@ -2184,7 +2251,7 @@
 			padding-left: 15px
 		&-item
 			max-width: none
-			transform: translateX(-50px)
+			transform: translateX(0px)
 			margin-bottom: 40px
 			&__title
 				font-size: 72px
@@ -2645,9 +2712,13 @@
 	body.theme--ligth .monetization .block-list__item
 		background: #fff
 		min-height: 138px
+	.gamification-engagement .advantages__items
+		margin-top: 0
+	.gamification-engagement
+		margin-bottom: 0
 
 	.monetization
-		padding: 20px 0 620px
+		padding: 90px 0 640px
 		overflow: hidden
 		margin-bottom: 30px
 		&__wrapper
@@ -2741,6 +2812,22 @@
 			img
 				margin-left: auto
 				margin-right: auto
+	.ease-use,
+	.shape-events
+		.block
+			&__inner
+				flex-direction: column-reverse
+				align-items: center
+			&__heading
+				margin-bottom: 30px
+				padding-left: 15px
+				padding-right: 15px
+			&__text
+				margin-bottom: 40px
+				padding-left: 15px
+				padding-right: 15px
+			&__content, &__text
+				max-width: none
 	.ease-use
 		padding: 80px 0
 		position: relative
@@ -2759,31 +2846,19 @@
 			right: 0
 			width: 161px
 			height: 223px
-		.block
-			&__inner
-				flex-direction: column-reverse
-				align-items: center
-			&__heading
-				margin-bottom: 30px
-				padding-left: 15px
-				padding-right: 15px
-			&__text
-				margin-bottom: 40px
-				padding-left: 15px
-				padding-right: 15px
-			&__content, &__text
-				max-width: none
-		.slider-cards
-			position: static
-			max-width: none
-			.card
-				transform: none
-				padding: 30px 20px
+
 		.slider-cards__arrow
 			margin-bottom: 20px
-			margin-left: 0
 		.select-btn
 			margin-top: 25px
+	.slider-cards
+		position: static
+		max-width: none
+		.card
+			transform: none
+			padding: 30px 20px
+			margin: 5px
+
 	.slider-cards .card.slick-slide.slick-active.slick-current
 		margin-right: 5px
 	.lifecycle
@@ -3089,8 +3164,15 @@
 		left: 160px
 
 @media (max-width: 640px)
-	.ambassadors-inside-surfaces--mobile
+	.monetization .block-list:before
+		width: 451px
+		height: 516px
+	.monetization
+		padding: 90px 0 520px
+	.monetization .block-list__item:before
+		margin-left: 0
 
+	.ambassadors-inside-surfaces--mobile
 		top: 90px
 		left: 70px
 		z-index: 1
@@ -3294,7 +3376,7 @@
 				width: 240px
 				height: 240px
 	.ambassadors-steps
-		margin-top: 220px
+		margin-top: 80px
 	.ambassadors-steps__heading
 		max-width: 260px
 		width: 100%
