@@ -1178,11 +1178,13 @@
 		width: 30%
 	.step-slider .card
 		min-height: 100%
+	body.theme--ligth .header__menu-list.has-dropdown.opened,
 	.header__menu-list.has-dropdown.opened
 		background: transparent
 		padding-top: 0
 	.partners__slider-arrows
 		margin-left: 0
+	body.theme--ligth .header__menu-list.has-dropdown ul,
 	.header__menu-list.has-dropdown ul
 		background: transparent
 		position: relative
@@ -1858,7 +1860,7 @@
 	.why-map--mob.light-mode
 		display: none
 	body.theme--ligth
-		.why-map--mob.light-mode
+		.why-map--mob
 			display: none
 		.why-map--mob.light-mode
 			display: block
@@ -2174,7 +2176,7 @@
 					background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
 					box-shadow: var(--box-shadow)
 					border-radius: 12px
-					color: var(--color-text)
+					color: var(--color-card-heading)
 					justify-content: center
 					width: 260px
 					margin: 20px 20px
@@ -3331,6 +3333,8 @@
 		margin-bottom: 30px
 
 @media (max-width: 482px)
+	.availability__slider
+		bottom: -110px
 	.availability__inner
 		height: 360px
 	.blog__card-box
