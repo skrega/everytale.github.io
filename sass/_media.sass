@@ -1,12 +1,17 @@
 @media (max-width: 1440px)
-	.step-slider
-		max-width: 790px
+	// .step-slider .card
+	// 	transform: translateX(35px)
+	.slider__inner
+		max-width: 640px
+	.slider-cards .card
+		transform: translate(280px)
+	.affiliate-ambassadors-testimonials
+		.affiliate__slide
+			transform: translate(-531px)
 	.step-slider .card
-		transform: translateX(35px)
-	// .scene
-	// 	width: 600px
-	.step-slider
-		max-width: 810px
+		transform: translateX(16px)
+	.monetization__img
+		top: -40px
 
 @media(max-width: 1380px)
 	.header__container
@@ -191,7 +196,7 @@
 
 	.setup-block
 		.step-slider
-			max-width: 620px
+
 	.live
 		&__inner
 			flex-direction: column-reverse
@@ -238,6 +243,8 @@
 				width: 44%
 				max-width: none
 @media(max-width: 1100px)
+	.slider-cards .card
+		transform: translate(183px)
 	.header__container
 		width: 95%
 	.container
@@ -331,7 +338,16 @@
 		margin-right: 0
 	.watch-now__slider
 		margin-top: 40px
-
+	.availability__slider
+		right: 0
+	.step-slider .card
+		margin-right: 10px
+	.step-slider
+		right: -39%
+	.step-slider .card
+		transform: translate(-94px)
+	.setup__slider
+		right: -48%
 	.header__menu-list:not(:first-child)
 		margin-right: 0
 		margin-left: 0
@@ -614,6 +630,12 @@
 	.data-analysis
 		padding-top: 80px
 @media(max-width: 980px)
+	.setup .container
+		padding: 0
+
+	.step-slider
+		right: 0
+
 	.page
 		margin-bottom: 30px
 	.marquee
@@ -1103,7 +1125,8 @@
 		line-height: 24px
 	.setup__slider .card-circle__icon.blue-bg
 		width: 30%
-
+	.step-slider .card
+		min-height: 100%
 	.header__menu-list.has-dropdown.opened
 		background: transparent
 		padding-top: 0
@@ -1135,8 +1158,17 @@
 		margin-left: 0
 	.features__wrap
 		padding-bottom: 255px
+
 	.availability__slider
-		bottom: -110px
+		bottom: 0px
+		.card
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+		.card__text
+			text-align: center
+
 	.availability
 		margin-bottom: 276px
 

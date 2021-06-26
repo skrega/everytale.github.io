@@ -500,10 +500,12 @@ body.theme--ligth .map
     margin: 59px auto 151px
     &-user
         border-radius: 50%
+        padding: 10px
         @include centerFlex
         overflow: hidden
         transition: all .3s
         z-index: 2
+
 .map__inner-top
     height: 100px
     & .map__inner-user:first-child
@@ -513,6 +515,9 @@ body.theme--ligth .map
         width: 74px
         height: 74px
         box-shadow: 0px 8px 15px rgba(245, 66, 130, 0.3)
+        padding: 7px
+        &:hover
+            padding: 10px
 
     & .map__inner-user:nth-child(2)
         position: absolute
@@ -520,9 +525,12 @@ body.theme--ligth .map
         top: 10px
         width: 124px
         height: 124px
+        padding: 0
+        &:hover
+            padding: 5px
 
 .map__inner-user:hover
-    padding: 5px
+    padding: 15px
 
 .map__inner-middle
     display: flex
@@ -604,8 +612,13 @@ body.theme--ligth .map
     background-color: rgba(#fff, 0.2)
     right: 270px
     bottom: -10px
+    &:hover
+        width: 113px
+        height: 113px
+
 body.theme--ligth .map__line
     filter: invert(100%)
+
 .map__line
     position: absolute
 
@@ -620,6 +633,7 @@ body.theme--ligth .map__line
 .map__line:nth-child(3)
     top: 30px
     right: 90px
+
 .map__line:nth-child(4)
     right: 107px
     bottom: 43px
@@ -841,8 +855,6 @@ body.theme--ligth
             height: 105px
             z-index: 2
             transition-delay: .15s
-        &:hover .card__icon-bottom
-            background-color: rgba(#fff, 0.1)
 
     &-card:nth-child(1) .card__icon-bottom
         background-color: $purple
@@ -864,6 +876,9 @@ body.theme--ligth
         box-shadow: 8px 8px 24px rgba(245, 66, 66, 0.25)
     &-card__text
         width: 300px
+
+.whom-card:hover .card__icon-bottom
+    background-color: rgba(#fff, 0.1)
 //whom end
 //banner start
 .banner
@@ -1447,6 +1462,9 @@ body.theme--ligth .article__nav::before
         margin-bottom: 120px
     &__content
         margin-left: 40px
+        max-width: 860px
+        width: 100%
+        margin-right: auto
     &__heading
         margin-bottom: 45px
     &__text
@@ -2317,19 +2335,17 @@ body.theme--ligth .pricing-item__li::before
 
 //setup end
 .step-slider
-    max-width: 830px
     width: 100%
     position: absolute
-    right: 0
+    right: -49%
     .slick-list
         margin: -40px 0
     .card
-        margin-top: 40px
         margin-bottom: 40px
         margin-right: 40px
         min-height: 305px
         height: 100%
-        transform: translateX(15px)
+
 //availability start
 .availability
     margin-bottom: 227px
@@ -2370,8 +2386,8 @@ body.theme--ligth .pricing-item__li::before
     &__slider
         bottom: -40px
         z-index: 1
-.availability__slider .card
-    transform: translateX(15px)
+// .availability__slider .card
+//     transform: translateX(15px)
 
 //availability end
 //live start
@@ -2575,13 +2591,17 @@ body.theme--ligth
 .circle-user:nth-child(1)
     transform: translate(-200px, -160px)
     animation: circleUser1 25s linear infinite
-
+    padding: 10px
+    &:hover
+        padding: 15px
 .circle-user:nth-child(2)
     transform: translate(0px, -217px)
     animation: circleUser2 25s linear infinite
+    padding: 7px
+    &:hover
+        padding: 10px
 
 .circle-user:nth-child(3)
-    transform: translate(208px, -150px)
     animation: circleUser3 25s linear infinite
 
 .circle-user:nth-child(4)
@@ -2671,30 +2691,48 @@ body.theme--ligth .monetization__wrapper
 
 .monetization
     margin-top: -300px
+    position: relative
     margin-bottom: 140px
-
-    &__wrapper
-        position: relative
-        margin-right: 140px
-        padding: 130px 0 206px
-        min-height: 627px
-        height: 100%
+    &::before
+        content: ""
+        position: absolute
         background-image: url(../images/monetization-bg.svg)
         background-repeat: no-repeat
         background-size: contain
+        width: 100%
+        height: 100%
+
+    &__wrapper
+        // position: relative
+        // margin-right: 140px
+        // padding: 130px 0 206px
+        // min-height: 627px
+        // height: 100%
+        // background-image: url(../images/monetization-bg.svg)
+        // background-repeat: no-repeat
+        // background-size: contain
+        position: absolute
+
+        width: 100%
+        img
+            width: 100%
 
     &__inner
         position: relative
         justify-content: flex-end
+        align-items: center
+        height: 645px
+
         p
             max-width: 337px
             width: 100%
+
     &__content
         max-width: 530px
     &__img
         position: absolute
         left: -40px
-        top: -150px
+        top: 0px
         max-width: 626px
         width: 100%
 
@@ -2719,7 +2757,10 @@ body.theme--ligth .advantages__item:hover
     &-img
         max-width: 500px
         width: 100%
-
+    .block__inner
+        justify-content: flex-start
+    .block__content
+        margin-left: 100px
 #sharability-surface
     bottom: -34px
     right: 107px
@@ -2735,10 +2776,22 @@ body.theme--ligth .advantages__item:hover
         z-index: 3
     .block__text
         max-width: 360px
-    .slider-cards__arrow
-        margin-left: 176px
+
     .slider-cards
-        bottom: 26px
+        bottom: -100px
+
+.slider__container .block__content
+    margin-left: 100px
+
+.slider__inner
+    max-width: 900px
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    position: relative
+.slider-cards
+    right: 0px
 
 #ease-use-surfase
     top: -90px
@@ -2983,18 +3036,31 @@ body.theme--ligth .affiliate__inner
     margin-bottom: 316px
     position: relative
     &__inner
-        background: rgba(#FFFFFF, 0.05)
+        max-width: 1160px
+        width: 100%
+        background: var(--card-bg)
         border-radius: 20px
+        box-shadow: var(--box-shadow)
         padding: 90px 0 0px 110px
         height: 488px
+        justify-content: flex-start
+        position: relative
 
+    &__content
+        position: relative
+        padding-bottom: 60px
+        height: 100%
+        width: 100%
     &__heading
         margin-bottom: 20px
+        max-width: 570px
+        width: 100%
+
     &__slider
-        max-width: 700px
         width: 100%
         position: absolute
-        right: 0
+        right: -51%
+        bottom: -170px
     &-items
         max-width: 480px
         width: 100%
@@ -3055,7 +3121,6 @@ body.theme--ligth .affiliate__inner
     position: relative
     margin-right: 30px
     margin-bottom: 40px
-    margin-top: 40px
     padding: 35px 40px 50px
     &::before
         content: ""
@@ -3158,6 +3223,7 @@ body.theme--ligth .affiliate-items
         height: 166px
         right: 80px
         top: 180px
+        //padding: 20px
 
     .affiliate-user:nth-child(2)
         width: 160px
@@ -3352,25 +3418,23 @@ body.theme--ligth .ambassadors-wrap
 
     .block__content
         max-width: 490px
-        margin-right: 40px
         position: relative
         z-index: 3
     .block__text
         max-width: 312px
     .card__text
         width: 250px
+
 .block-slider__inner
-    justify-content: space-evenly
-.slider-cards__arrow
-    margin-left: 214px
+    display: flex
+
 .slider-cards
-    max-width: 600px
     width: 100%
     position: absolute
-    left: 0
+
     bottom: -54px
     .card
-        transform: translateX(202px)
+        transform: translateX(129px)
         margin: 20px 20px 37px
         padding: 50px 30px
         position: relative
@@ -3378,13 +3442,15 @@ body.theme--ligth .ambassadors-wrap
         transition: all .3s
     .card.slick-active
         opacity: 1
-        box-shadow: none
+        box-shadow: var(--box-shadow)
     .card:hover
         opacity: 1
     .card.slick-slide.slick-active.slick-current
-        box-shadow: var(--box-shadow)
-        margin-right: 30px
 
+        margin-right: 30px
+    .slick-list
+        padding: 0 30px
+        margin: 0 -30px
 //shape-events end
 //which-ambassador start
 .which-ambassador
