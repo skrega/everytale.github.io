@@ -195,7 +195,7 @@ body.theme--ligth .broadcast__img
     position: absolute
     top: 0px
     right: 0px
-    padding-left: 40px
+    padding-left: 0px
     padding-bottom: 20px
     width: 100%
     height: 100%
@@ -814,15 +814,10 @@ body.theme--ligth
     &__head
         @include FlexBetween
     &__slide
-        // display: grid !important
-        // display: -ms-grid !important
-        // grid-gap: 40px
-        // -ms-grid-gap: 40px
-        // grid-template-columns: 1fr 1fr 1fr
-        // -ms-grid-template-columns: 1fr 1fr 1fr
         padding-bottom: 50px
         display: flex !important
         flex-wrap: wrap
+        justify-content: center
     &-card
         display: flex
         flex-direction: column
@@ -1856,16 +1851,20 @@ body.theme--ligth
 .advanced-tabs
     .tab-item
         position: relative
+    .tab-item img
+        transform: scale(1)
+        transition: all .3s
+        &:hover
+            transform: scale(1.03)
+
 .tab-tech__img
     margin-left: -10px
+
 .tab-tech__img-position
     position: absolute
     bottom: -81px
     right: -51px
-    transform: scale(1)
-    transition: all .3s
-    &:hover
-        transform: scale(1.03)
+
 //advanced end
 .inner-gradient
     padding: 90px 0
@@ -2686,7 +2685,7 @@ body.theme--ligth
 //features end
 
 //monetization start
-body.theme--ligth .monetization__wrapper
+body.theme--ligth .monetization
     background-image: url(../images/monetization-bg_white.svg)
 
 .monetization

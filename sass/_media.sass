@@ -4,8 +4,6 @@
 		padding-bottom: 120px
 
 @media (max-width: 1440px)
-	// .step-slider .card
-	// 	transform: translateX(35px)
 	.slider__inner
 		max-width: 640px
 	.slider-cards .card
@@ -19,7 +17,16 @@
 		background-size: contain
 		max-width: 1330px
 
-@media(max-width: 1380px)
+@media (max-width: 1380px)
+	.surface
+		width: 80%
+	.promo-surface__orange svg
+		bottom: 28%
+		right: 45%
+	.promo-surface__purple svg
+		right: -3%
+	.promo-surface__top svg
+		right: -220px
 	.header__container
 		width: 90%
 	.why-map
@@ -55,7 +62,24 @@
 			right: 325px
 	.monetization__wrapper
 		margin-right: 0
-@media(max-width: 1240px)
+@media (max-width: 1240px)
+	body.theme--ligth .broadcast__img,
+	.broadcast__img
+		top: 0
+		right: 30px
+		max-width: 540px
+
+	.header__menu-list.has-dropdown
+		padding-right: 10px
+	.header__menu-list.has-dropdown
+		li
+			font-size: 13px
+		ul
+			padding: 0px 18px 10px 17px
+			margin-top: -1px
+	.header__menu-list:not(:first-child)
+		margin-right: 35px
+
 	.why-map
 		&__img
 			top: -140px
@@ -108,7 +132,13 @@
 	.monetization__inner
 		height: 533px
 
-@media(max-width: 1200px)
+@media (max-width: 1200px)
+	.advantages__items
+		grid-gap: 0px
+	.make-money__img
+		max-width: 590px
+		width: 100%
+		height: auto
 
 	.interested__cards
 		margin-left: 0
@@ -122,6 +152,13 @@
 			width: 650px
 			height: 487px
 			top: 0px
+	.tab:not(:last-child)
+		margin-right: 10px
+	.partners__head
+		justify-content: space-between
+	.partners__heading
+		width: 200px
+
 	.upload
 		&__img
 			width: 470px
@@ -152,7 +189,8 @@
 			width: auto
 	.watch-now
 		&__inner
-			flex-direction: column
+			flex-direction: column-reverse
+
 		&__content
 			display: flex
 			justify-content: space-between
@@ -167,6 +205,8 @@
 		&__items
 			flex-wrap: wrap
 			justify-content: center
+			max-width: 830px
+			margin: 0 auto
 	.card_small
 		margin: 10px
 	.footer
@@ -255,7 +295,17 @@
 			&__card
 				width: 44%
 				max-width: none
-@media(max-width: 1100px)
+@media (max-width: 1100px)
+	.event-item:nth-child(2)
+		right: 50px
+	.event-arrow__bottom
+		right: 0
+
+	.monetize__images
+		right: 0
+	.whom .slick-list
+		margin: 0 -20px
+
 	.slider-cards .card
 		transform: translate(183px)
 	.header__container
@@ -339,10 +389,22 @@
 	.contact__wrapper
 		.contact-form
 			max-width: 600px
-@media(max-width: 1040px)
+@media (max-width: 1040px)
 	h1
 		font-size: 50px
 		line-height: 50px
+	.footer__bottom-content
+		flex-wrap: wrap
+		width: 100%
+	.subscribe__inner
+	    padding-left: 40px
+
+	.tab-tech__img-position
+		right: -60px
+	.map__items
+		max-width: 100%
+	.map__item
+		margin: 25px 10px 40px
 
 	.advantages__items
 		grid-gap: 10px
@@ -352,6 +414,9 @@
 	.monetization
 		max-width: 100%
 		width: 100%
+		.block__text
+			margin-bottom: 40px
+
 	.monetization__img
 		top: -150px
 
@@ -567,7 +632,7 @@
 	.monetize
 		padding: 80px 0
 		&__images
-			right: -70px
+			right: -30px
 			transform: scale(.7)
 	.broadcast
 		&__img
@@ -593,7 +658,9 @@
 	#ambassadors-surfaces
 		transform: scale(.6)
 	.scene
-		width: 970px
+		max-width: 970px
+		width: 100%
+		right: 60px
 	.promo-surface__top svg
 		top: -105%
 		right: -20px
@@ -602,9 +669,11 @@
 		right: 2%
 		width: 220px
 	.partners__heading
-		max-width: 200px
-	.tab:not(:last-child)
-		margin-right: -10px
+		margin-right: 10px
+	.tab
+		padding: 9px 25px
+		&:not(:last-child)
+			margin-right: 5px
 	.surface-top-purple svg
 		top: -210px
 		width: 240px
@@ -657,7 +726,15 @@
 		padding: 100px 0 530px
 	.data-analysis
 		padding-top: 80px
-@media(max-width: 980px)
+@media (max-width: 980px)
+	body.theme--ligth .broadcast__img, .broadcast__img
+		max-width: 500px
+	.advantages__content
+		text-align: center
+	.map .container
+		padding: 0
+	.map__text
+		padding: 0 15px
 	.monetization
 		background-size: 0
 	.gamification-engagement
@@ -863,6 +940,15 @@
 	.contact__wrapper
 		flex-direction: column
 @media (max-width: 920px)
+	.partners .tabs
+		display: none
+	.partners__heading
+		width: 100%
+	.broadcast__inner
+		display: flex
+		align-items: flex-start
+	.broadcast__img
+		position: relative
 	.blog .tabs
 		position: relative
 		top: 0
@@ -887,7 +973,7 @@
 				display: block
 				.tabs
 					margin-bottom: 60px
-@media(max-width: 900px)
+@media (max-width: 900px)
 	#ambassadors-surfaces
 		display: none
 
@@ -916,7 +1002,7 @@
 		.block__heading, .block__text
 			margin-bottom: 30px
 	.property__items
-		justify-content: space-around
+		justify-content: center
 		width: 100%
 		margin-top: 40px
 	.property__text
@@ -1014,7 +1100,7 @@
 	.why-map--mob
 		display: none
 
-@media(max-width: 840px)
+@media (max-width: 840px)
 	body.theme--ligth
 		.logo svg path
 			fill: $purple
@@ -1028,6 +1114,9 @@
 				margin-bottom: 30px
 			&__img
 				margin-top: 40px
+	.gamification-engagement .card__heading
+		text-align: left
+
 	.why-us
 		> .container
 			padding-left: 0
@@ -1136,7 +1225,46 @@
 		right: -40px
 	#ease-use-surfase
 		display: none
-@media(max-width: 800px)
+	.affiliate-ambassadors
+		.container
+			padding: 0 0
+	.affiliate
+
+		&-ambassadors
+			text-align: center
+		&-user, &-items
+			display: none
+		&__inner
+			padding-top: 50px
+			padding-left: 20px
+			padding-right: 20px
+			height: 200px
+			margin: 0 auto
+			max-width: 800px
+			width: 100%
+		&__heading
+			margin: 0 auto 40px
+		&__content
+			padding: 0
+		&__slider
+			max-width: none
+			width: 100%
+			position: static
+			margin-top: -50px
+			.slick-track
+				display: flex
+		&__slide
+			width: 260px
+			padding: 30px 20px 40px
+			margin-left: 5px
+			margin-right: 5px
+			height: inherit
+			.link
+				color: $black
+			.card-circle__icon
+				margin: 0 auto 24px
+
+@media (max-width: 800px)
 	.monetize
 		&__images
 			right: -200px
@@ -1148,11 +1276,11 @@
 	.ease-use .block__content
 		max-width: 310px
 
-@media(min-width: 1041px)
+@media (min-width: 1041px)
 	.header__container--mobile, .mobile-menu
 		display: none !important
 
-@media(max-width: 768px)
+@media (max-width: 768px)
 
 	h1
 		font-size: 38px
@@ -1165,6 +1293,13 @@
 		line-height: 32px
 	p
 		line-height: 24px
+
+	.gamification-engagement .card__heading
+		text-align: center
+
+	.broadcast__inner
+		flex-direction: column
+		align-items: center
 	.block-slider__inner
 		flex-direction: column-reverse
 	.slider__container .block__content
@@ -1465,12 +1600,14 @@
 			&:first-child
 				top: auto
 				bottom: -25px
-				left: -50px
-				transform: scale(.4)
+				left: 0px
+				transform: scale(.9)
+			&:nth-child(2)
+				height: auto
 			&:nth-child(3)
 				bottom: -100px
-				right: -95px
-				transform: scale(.4)
+				right: 0px
+				transform: scale(.9)
 		.block
 			&__heading
 				margin-bottom: 25px
@@ -1495,9 +1632,8 @@
 					margin-left: -8.5px
 					top: 30px
 	.partners
-		.tabs
-			display: none
 		&__head
+			text-align: center
 			flex-direction: column
 		&__heading
 			margin-right: 0
@@ -1526,6 +1662,12 @@
 			text-align: center
 			margin: 10px 5px
 			padding: 30px 20px 40px
+			display: flex !important
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			min-height: 285px
+			height: 100%
 			&:nth-child(6n-3) .card__icon-bottom
 				background-color: $purple
 				box-shadow: 8px 8px 24px rgba(156, 66, 245, 0.25)
@@ -1546,13 +1688,13 @@
 				box-shadow: 8px 8px 24px rgba(245, 66, 66, 0.25)
 			.card__icon-bottom
 				display: inline-flex
-				margin-top: 40px
+				margin-top: 0px
 		&-card__inner
 			display: flex
 			flex-direction: column
 			justify-content: space-between
 			align-items: center
-			height: 100%
+
 	.banner
 		padding-top: 70px
 		padding-bottom: 80px
@@ -1716,7 +1858,6 @@
 		margin: 60px 0 80px
 		&__items
 			margin-top: 60px
-			justify-content: space-between
 		&__item
 			padding: 20px 12px
 			width: 30%
@@ -1724,8 +1865,8 @@
 			border-radius: 12px
 
 			&:nth-child(2)
-				margin-left: 0
-				margin-right: 0
+				margin-left: 10px
+				margin-right: 10px
 				height: 240px
 			&:nth-child(3)
 				height: 200px
@@ -1871,40 +2012,7 @@
 	.why-map--mob
 		width: 100%
 		margin-top: 20px
-	.affiliate-ambassadors
-		.container
-			padding: 0 0
-	.affiliate
 
-		&-ambassadors
-			text-align: center
-		&-user, &-items
-			display: none
-		&__inner
-			padding-top: 50px
-			padding-left: 20px
-			padding-right: 20px
-			background: none
-			box-shadow: none
-			height: auto
-		&__heading
-			margin-bottom: 40px
-		&__content
-			padding: 0
-		&__slider
-			max-width: none
-			width: 100%
-			position: static
-			.slick-track
-				display: flex
-		&__slide
-			width: 260px
-			padding: 30px 20px 40px
-			margin-left: 5px
-			margin-right: 5px
-			height: inherit
-			.link
-				color: $black
 	body.theme--ligth
 		.loyalty-item
 			background: #fff
@@ -2074,6 +2182,7 @@
 			flex-direction: column-reverse
 			> img
 				margin-top: 60px
+				height: auto
 	.ambassadors
 		position: relative
 		z-index: 2
@@ -3166,6 +3275,18 @@
 		left: 160px
 
 @media (max-width: 640px)
+	.whom-card__inner
+		max-width: 280px
+		width: 100%
+	.monetize__img:first-child
+		width: 35%
+	.monetize__img:nth-child(3)
+		width: 54%
+	.watch-now__item-img img
+		width: 100%
+	.select-btn
+		padding: 17px 33px 17px 33px
+
 	.monetization .block-list:before
 		width: 451px
 		height: 516px
@@ -3270,6 +3391,10 @@
 		left: 90px
 		top: 120px
 @media (max-width: 540px)
+	.monetize__img:nth-child(3)
+		bottom: -80px
+	.monetize .slick-track .slick-slide
+		padding: 65px 30px 30px
 	.interested-card
 		top: -50px
 		width: 280px
@@ -3333,6 +3458,7 @@
 		margin-bottom: 30px
 
 @media (max-width: 482px)
+
 	.availability__slider
 		bottom: -110px
 	.availability__inner
@@ -3397,7 +3523,7 @@
 		bottom: -100px
 		transform: scale(.4)
 	.why-lose__img:nth-child(2)
-		width: 80%
+		width: 70%
 	.slider-cards .card,
 	.affiliate-ambassador-item__list-slider li
 		margin: 20px 5px
