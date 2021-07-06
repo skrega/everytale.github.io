@@ -72,11 +72,11 @@
 	.article__more .blog__card
 		margin-right: 30px
 
-	body.theme--ligth .broadcast__img,
-	.broadcast__img
+	body.theme--ligth .broadcast__img,.broadcast__img
 		top: 0
 		right: 30px
-		max-width: 540px
+		max-width: 670px
+		height: auto
 
 	.header__menu-list.has-dropdown
 		padding-right: 10px
@@ -142,6 +142,10 @@
 		height: 533px
 
 @media (max-width: 1200px)
+	body.theme--ligth .broadcast__img, .broadcast__img
+		max-width: 570px
+		height: auto
+
 	.slider-cards .card
 		transform: translate(334px)
 	.ambassadors-surface__purple svg
@@ -274,10 +278,19 @@
 		&__inner
 			flex-direction: column-reverse
 		&__step
-			right: auto
-			left: -70px
+			right: 0
+			left: 0
+			margin: 0 auto
 		&__items
-			margin-top: 40px
+			margin-right: 0
+			margin: 40px auto
+
+		.block__content
+			margin: 0 auto
+			text-align: center
+	.events-advantages__img
+		max-width: 550px
+
 	.events-advantages
 		.btn
 			margin: 10px 15px
@@ -315,29 +328,38 @@
 				width: 44%
 				max-width: none
 @media (max-width: 1100px)
+	.watch-now__slider
+		margin-top: 40px
+		margin-bottom: 40px
 	.upload__img
 		width: 640px
 		height: 412px
 
 	.slider-cards .card
 		transform: translate(324px)
+
 	.article__more
 		.blog__card
 			max-width: 100%
+
 	.event-item:nth-child(2)
 		right: 50px
+
 	.event-arrow__bottom
 		right: 0
 
 	.monetize__images
 		right: 0
+
 	.whom .slick-list
 		margin: 0 -20px
 
 	.header__container
 		width: 95%
+
 	.container
 		width: 100%
+
 	.header
 		&__menu
 			margin-left: 25px
@@ -421,11 +443,47 @@
 		line-height: 50px
 	.affiliate-ambassadors
 		padding-bottom: 160px
+		margin-bottom: 30px
+	.loyalty
+		.container
+			padding: 0
+		.block__inner
+			padding: 0 15px
+		.block__content
+			margin-left: 70px
+	.loyalty__img
+		max-width: 550px
+	.surface-orange_big svg
+		top: -16%
+		width: 220px
+
+	.loyalty-item
+		margin-right: 10px
+	.footer__bottom-list
+		justify-content: center
+		width: 100%
+		margin-bottom: 10px
+	.footer__bottom-content
+		justify-content: center
 	.affiliate__slider
 		bottom: -20px
 
+	.live__inner
+		align-items: center
+
+	.slider-cards .card
+		transform: translate(310px)
+
+	.slider-cards
+		position: static
+		bottom: 0
+		margin-top: 32px
+	.shape-events .block__content, .shape-events .block__text
+		margin: 0 auto
+		text-align: center
+		max-width: 500px
 	.tab-tech__img
-		max-width: 470px
+		max-width: 440px
 		width: 100%
 	.footer__bottom-content
 		flex-wrap: wrap
@@ -468,8 +526,7 @@
 		margin-top: 10px
 	.header__menu-list:not(:last-child)
 		margin-right: 0
-	.watch-now__slider
-		margin-top: 40px
+
 	.availability__slider
 		right: 0
 	.step-slider .card
@@ -477,7 +534,7 @@
 	.step-slider
 		right: -39%
 	.step-slider .card
-		transform: translate(-94px)
+		transform: translate(0px)
 	.setup__slider
 		right: -48%
 	.header__menu-list:not(:first-child)
@@ -704,10 +761,13 @@
 		right: 60px
 	.promo-surface__top svg
 		top: -105%
-		right: -20px
+		right: -270px
+	.promo-surface__orange svg
+		right: 150px
+
 	.promo-surface__purple svg
 		bottom: -14%
-		right: 2%
+		right: -208px
 		width: 220px
 	.partners__heading
 		margin-right: 10px
@@ -746,8 +806,8 @@
 		bottom: -160px
 
 	.ease-use .card
-		width: 270px
-		transform: translateX(-90px)
+		width: 315px
+		transform: translateX(-18px)
 		margin: 20px 10px 37px
 
 	#features-surfases img
@@ -768,6 +828,8 @@
 	.data-analysis
 		padding-top: 80px
 @media (max-width: 980px)
+	.slider-cards .card.slick-slide.slick-active.slick-current
+		margin-right: 10px
 	.compensation__charts
 		flex-direction: column
 	.circle:nth-child(2)
@@ -994,7 +1056,16 @@
 		flex-direction: column-reverse
 	.slider__inner
 		max-width: 100%
-		overflow: hidden
+	.ease-use
+		.block__content
+			margin: 0 auto
+			text-align: center
+		.block__text
+			margin: 0 auto 40px
+	.ease-use .card
+		transform: translate(0)
+	.ease-use .slider-cards
+		position: static
 
 	.shape-events .block__content, .shape-events .block__text
 		max-width: none
@@ -1231,9 +1302,13 @@
 		top: -210px
 	.foter
 		&-col:not(:last-child)
-			flex: 22%
+			flex: 15%
 		&-col:last-child
 			flex: auto
+
+	.footer__bottom-list
+		width: 100%
+		margin-bottom: 15px
 	.footer
 		&__inner
 			> *
@@ -1257,9 +1332,11 @@
 	.loyalty
 		&__items
 			flex-direction: column
+			overflow: hidden
 		&-item
 			max-width: none
 			height: auto
+			margin: 0 5px
 	.the-more-the
 		text-align: center
 		.block__inner
@@ -1398,8 +1475,15 @@
 		line-height: 24px
 	.circle:nth-child(2)
 		margin: 0
+	.footer__bottom-list
+		justify-content: flex-start
+		margin-bottom: 0
+	.footer__bottom-content
+		justify-content: flex-start
 	.map__item
 		margin: 25px 10px 0px
+	.banner__content
+		margin: 0 auto
 	.blog__card-text,
 	.blog__card-suptitle
 		line-height: 20px
@@ -1582,8 +1666,7 @@
 			&-date
 				font-size: 14px
 				line-height: 20px
-		&__link
-			margin-top: 50px
+
 	.advantages
 		text-align: center
 		&__content
@@ -2115,6 +2198,7 @@
 				margin-left: 15px
 	.why-map--mob.light-mode
 		display: none
+
 	body.theme--ligth
 		.why-map--mob
 			display: none
@@ -3363,6 +3447,8 @@
 		position: relative
 
 @media (max-width: 640px)
+	.money-transfer #bottom-surfaces
+		display: none
 	.advanced-tabs .tab-item img
 		margin: 0
 		margin-right: auto
