@@ -63,6 +63,9 @@
 	.monetization__wrapper
 		margin-right: 0
 @media (max-width: 1240px)
+	.ambassadors-surface__purple svg
+		right: -30px
+
 	.article__slider
 		padding-right: 0
 		margin-right: 0
@@ -139,6 +142,11 @@
 		height: 533px
 
 @media (max-width: 1200px)
+	.slider-cards .card
+		transform: translate(334px)
+	.ambassadors-surface__purple svg
+		right: -110px
+
 	.ambassadors__img img
 		width: 100%
 		height: auto
@@ -172,8 +180,9 @@
 
 	.upload
 		&__img
-			width: 470px
-			height: 302px
+			width: 700px
+			height: 452px
+			right: 0
 	.map
 		&__inner
 			width: 85%
@@ -237,7 +246,6 @@
 		max-width: 450px
 
 	.loyalty
-		margin-top: 270px
 		padding-top: 0
 		&__items
 			justify-content: space-around
@@ -307,6 +315,12 @@
 				width: 44%
 				max-width: none
 @media (max-width: 1100px)
+	.upload__img
+		width: 640px
+		height: 412px
+
+	.slider-cards .card
+		transform: translate(324px)
 	.article__more
 		.blog__card
 			max-width: 100%
@@ -320,8 +334,6 @@
 	.whom .slick-list
 		margin: 0 -20px
 
-	.slider-cards .card
-		transform: translate(183px)
 	.header__container
 		width: 95%
 	.container
@@ -407,6 +419,11 @@
 	h1
 		font-size: 50px
 		line-height: 50px
+	.affiliate-ambassadors
+		padding-bottom: 160px
+	.affiliate__slider
+		bottom: -20px
+
 	.tab-tech__img
 		max-width: 470px
 		width: 100%
@@ -669,8 +686,8 @@
 	.upload
 		margin-bottom: 80px
 		&__img
-			width: 330px
-			height: 212px
+			width: 590px
+			height: 372px
 	.property
 		margin: 60px 0
 	.advanced
@@ -751,6 +768,14 @@
 	.data-analysis
 		padding-top: 80px
 @media (max-width: 980px)
+	.compensation__charts
+		flex-direction: column
+	.circle:nth-child(2)
+		margin: 25px 0
+	.upload__img
+		width: 500px
+		height: 322px
+
 	.advanced .block__content
 		max-width: 350px
 
@@ -886,7 +911,6 @@
 		padding: 80px 0
 	.compensation
 		padding-top: 80px
-		margin-bottom: 80px
 		.block__heading
 			margin-bottom: 30px
 		&__text
@@ -966,6 +990,15 @@
 		max-width: 440px
 	.contact__wrapper
 		flex-direction: column
+	.block-slider__inner
+		flex-direction: column-reverse
+	.slider__inner
+		max-width: 100%
+		overflow: hidden
+
+	.shape-events .block__content, .shape-events .block__text
+		max-width: none
+
 @media (max-width: 920px)
 	.partners .tabs
 		display: none
@@ -1016,9 +1049,9 @@
 			width: 400px
 			height: 300px
 			top: 30px
-	.upload__img
-		width: 230px
-		height: 148px
+	// .upload__img
+	// 	width: 230px
+	// 	height: 148px
 	.watch-now
 		margin: 0px 0 90px
 	.property__inner
@@ -1132,7 +1165,7 @@
 	.ambassadors
 		position: relative
 		z-index: 2
-		&:before, &:after
+		&:before
 			position: absolute
 			content: ""
 			display: block
@@ -1145,12 +1178,7 @@
 			background-image: url('../images/surfaces/surface-orange.svg')
 			bottom: 130px
 			left: 240px
-		&:after
-			width: 221px
-			height: 221px
-			background-image: url('../images/surfaces/surface-purple.svg')
-			bottom: -80px
-			right: 110px
+
 	.ambassadors-inside-surfaces--mobile
 		display: block
 		position: absolute
@@ -1183,6 +1211,10 @@
 			.promo__content
 				padding-left: 15px
 				padding-right: 15px
+				margin: 0 auto
+	.affiliate-ambassadors
+		padding-top: 60px
+		padding-bottom: 80px
 	.header
 		&__container
 			flex-wrap: wrap
@@ -1364,6 +1396,10 @@
 		line-height: 32px
 	p
 		line-height: 24px
+	.circle:nth-child(2)
+		margin: 0
+	.map__item
+		margin: 25px 10px 0px
 	.blog__card-text,
 	.blog__card-suptitle
 		line-height: 20px
@@ -1497,10 +1533,11 @@
 
 	.scene, #monetize-surfaces, #surface_bottom, #upload-surfase, #faq-surfaces, #loyalty-surfases, #why-lose-surfases, #top-surfaces, #interested-top-surfaces, #three-surfaces, #features-surfases, #sharability-surface, #test-features-surfases
 		display: none
-
+	.upload .promo__content
+		max-width: 500px
 	.promo
 		&__content
-			max-width: none !important
+			max-width: none
 			text-align: center
 		&__text-short
 			max-width: none
@@ -2104,7 +2141,6 @@
 				height: 105px
 
 	.loyalty
-		margin-top: 100px
 		padding-top: 50px
 		padding-bottom: 80px
 		text-align: center
@@ -2409,7 +2445,6 @@
 	.affiliate-ambassadors__slider .affiliate__slide
 		width: 500px
 	.ambassadors-steps
-		margin-top: 80px
 		&__heading
 			margin-bottom: 30px
 			padding-left: 15px
@@ -3569,8 +3604,7 @@
 			&:nth-child(1), &:nth-child(2), &:nth-child(3)
 				width: 240px
 				height: 240px
-	.ambassadors-steps
-		margin-top: 80px
+
 	.ambassadors-steps__heading
 		max-width: 260px
 		width: 100%
@@ -3685,6 +3719,8 @@
 		margin-bottom: 4px
 
 @media (max-width: 330px)
+	.affiliate__slider
+		margin-top: -20px
 	.money-transfer__box-1, .money-transfer__box-4, .money-transfer__box-3
 		transform: scale(0.7)
 	.money-transfer__box-1

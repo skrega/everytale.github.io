@@ -365,17 +365,7 @@ $(function () {
         //     $('.shape-events').find('.slider-cards__arrow').insertBefore('.shape-events .block__content');
         //     $('.shape-events').find('.select-btn').prependTo('.shape-events .block__inner');
         // }
-        if ($(window).width() <= 1041) {
 
-            $('.affiliate-ambassador-item__list-slider').slick({
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                arrows: false
-            });
-        }
 
         if ($('.which-ambassador').length > 0) {
             $('.affiliate-ambassador__items').before('<div class="affiliate-ambassador__items--mobile"></div>');
