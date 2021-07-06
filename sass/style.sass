@@ -1380,7 +1380,7 @@ body.theme--ligth .blog__card
 .blog__card
     max-width: 360px
     width: 100%
-    height: 369px
+    min-height: 369px
     margin-bottom: 40px
     margin-left: 40px
     border-radius: 12px
@@ -3037,6 +3037,7 @@ body.theme--ligth .affiliate__inner
 .affiliate
     margin-bottom: 316px
     position: relative
+
     &__inner
         max-width: 1160px
         width: 100%
@@ -3204,6 +3205,11 @@ body.theme--ligth .affiliate__inner
 //ambassadors start
 .affiliate-ambassadors
     position: relative
+    overflow: hidden
+    padding-top: 140px
+    padding-bottom: 200px
+.affiliate__slider
+    bottom: 30px
 
 .affiliate-user
     position: absolute
@@ -3503,16 +3509,16 @@ body.theme--ligth .affiliate-ambassador-item:hover
         line-height: 24px
         display: flex
         align-items: center
+        padding-left: 35px
         &:not(:last-child)
             margin-bottom: 15px
         &::before
             content: ""
-            margin-right: 20px
+            position: absolute
             background-image: url(../images/icons/check-mark.svg)
             width: 15px
             height: 13px
             left: 0
-            top: 7px
             background-size: contain
             background-position: center
             background-repeat: no-repeat
@@ -3555,7 +3561,6 @@ body.theme--ligth .affiliate-ambassador-item.center:hover
 .compensation
     position: relative
     padding-top: 150px
-    margin-bottom: 140px
     &__heading,
     &__text
         text-align: center
@@ -3699,7 +3704,7 @@ body.theme--ligth .circle
 //compensation end
 //ambassadors-steps start
 .ambassadors-steps
-    margin-top: 290px
+
     &__heading
         margin-bottom: 120px
     &__items

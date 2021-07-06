@@ -63,6 +63,12 @@
 	.monetization__wrapper
 		margin-right: 0
 @media (max-width: 1240px)
+	.article__slider
+		padding-right: 0
+		margin-right: 0
+	.article__more .blog__card
+		margin-right: 30px
+
 	body.theme--ligth .broadcast__img,
 	.broadcast__img
 		top: 0
@@ -133,6 +139,11 @@
 		height: 533px
 
 @media (max-width: 1200px)
+	.ambassadors__img img
+		width: 100%
+		height: auto
+	.blog__card-box
+		height: 200px
 	.advantages__items
 		grid-gap: 0px
 	.make-money__img
@@ -296,6 +307,9 @@
 				width: 44%
 				max-width: none
 @media (max-width: 1100px)
+	.article__more
+		.blog__card
+			max-width: 100%
 	.event-item:nth-child(2)
 		right: 50px
 	.event-arrow__bottom
@@ -393,11 +407,21 @@
 	h1
 		font-size: 50px
 		line-height: 50px
+	.tab-tech__img
+		max-width: 470px
+		width: 100%
 	.footer__bottom-content
 		flex-wrap: wrap
 		width: 100%
+	.article__more .blog__card-box
+		height: 230px
+
+	.blog__card
+		min-height: 309px
 	.subscribe__inner
-	    padding-left: 40px
+		padding-left: 40px
+	.blog__card-box
+		height: 190px
 
 	.tab-tech__img-position
 		right: -60px
@@ -727,6 +751,9 @@
 	.data-analysis
 		padding-top: 80px
 @media (max-width: 980px)
+	.advanced .block__content
+		max-width: 350px
+
 	body.theme--ligth .broadcast__img, .broadcast__img
 		max-width: 500px
 	.advantages__content
@@ -964,15 +991,16 @@
 		margin-right: 20px
 	.monetization__img
 		max-width: 450px
+
 	.blog
-		.blog
-			&__card
-				margin-left: 30px
-				margin-bottom: 30px
-			&-tabs
-				display: block
-				.tabs
-					margin-bottom: 60px
+		&__card
+			margin-left: 30px
+			margin-bottom: 30px
+		&-tabs
+			display: block
+			.tabs
+				margin-bottom: 60px
+
 @media (max-width: 900px)
 	#ambassadors-surfaces
 		display: none
@@ -1101,6 +1129,37 @@
 		display: none
 
 @media (max-width: 840px)
+	.ambassadors
+		position: relative
+		z-index: 2
+		&:before, &:after
+			position: absolute
+			content: ""
+			display: block
+			background-repeat: no-repeat
+			background-size: contain
+			z-index: 5
+		&:before
+			width: 129px
+			height: 129px
+			background-image: url('../images/surfaces/surface-orange.svg')
+			bottom: 130px
+			left: 240px
+		&:after
+			width: 221px
+			height: 221px
+			background-image: url('../images/surfaces/surface-purple.svg')
+			bottom: -80px
+			right: 110px
+	.ambassadors-inside-surfaces--mobile
+		display: block
+		position: absolute
+		top: 110px
+		left: 130px
+		z-index: -1
+
+	.ambassadors__img
+		max-width: 500px
 	body.theme--ligth
 		.logo svg path
 			fill: $purple
@@ -1265,6 +1324,8 @@
 				margin: 0 auto 24px
 
 @media (max-width: 800px)
+	.tab-tech__img-position
+		width: 245px
 	.monetize
 		&__images
 			right: -200px
@@ -1275,6 +1336,16 @@
 			height: 225px
 	.ease-use .block__content
 		max-width: 310px
+	.advanced .block__content
+		margin-bottom: 50px
+
+	.advanced .block__inner
+		flex-direction: column-reverse
+		align-items: center
+		text-align: center
+
+	.advanced .block__heading, .advanced .block__text
+		margin: 0 auto 30px
 
 @media (min-width: 1041px)
 	.header__container--mobile, .mobile-menu
@@ -1293,6 +1364,13 @@
 		line-height: 32px
 	p
 		line-height: 24px
+	.blog__card-text,
+	.blog__card-suptitle
+		line-height: 20px
+		font-size: 14px
+
+	.tab-tech__img
+		margin: 0 auto
 
 	.gamification-engagement .card__heading
 		text-align: center
@@ -1919,7 +1997,7 @@
 			width: 90%
 			&-position
 				bottom: -90px
-				right: -70px
+				right: 0px
 				transform: scale(.5)
 	.subscribe
 		text-align: center
@@ -2184,27 +2262,8 @@
 				margin-top: 60px
 				height: auto
 	.ambassadors
-		position: relative
-		z-index: 2
-		&:before, &:after
-			position: absolute
-			content: ""
-			display: block
-			background-repeat: no-repeat
-			background-size: contain
-			z-index: 5
-		&:before
-			width: 120px
-			height: 130px
-			background-image: url('../images/surface13.png')
-			bottom: 90px
-			left: 0
-		&:after
-			width: 96px
-			height: 96px
-			background-image: url('../images/surface14.png')
-			bottom: 250px
-			right: 0
+		&::before
+			left: 20%
 		.promo
 			&__text
 				margin-top: 30px
@@ -3181,7 +3240,7 @@
 			&__card
 				height: auto
 				&-content
-					padding: 25px 20px
+					padding: 20px 20px 25px
 			&__card-box
 				height: auto
 	.mfp-wrap
@@ -3250,8 +3309,8 @@
 			max-width: none
 			width: auto
 			height: auto
-			margin-left: 0
-			margin-right: 0
+			margin-left: 7px
+			margin-right: 7px
 		&__more
 			padding: 80px 0
 			&-head
@@ -3268,13 +3327,21 @@
 		z-index: 3
 		position: relative
 
-	.ambassadors-inside-surfaces--mobile
-		display: block
-		position: absolute
-		top: 210px
-		left: 160px
-
 @media (max-width: 640px)
+	.advanced-tabs .tab-item img
+		margin: 0
+		margin-right: auto
+	.advanced-tabs
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	.tab-tech__img
+		width: 100%
+		max-width: 100%
+
+	.article__more .blog__card-box
+		height: auto
 	.whom-card__inner
 		max-width: 280px
 		width: 100%
@@ -3294,11 +3361,8 @@
 		padding: 90px 0 520px
 	.monetization .block-list__item:before
 		margin-left: 0
-
-	.ambassadors-inside-surfaces--mobile
-		top: 90px
-		left: 70px
-		z-index: 1
+	.ambassadors:after
+		right: 0
 
 	.partners__item
 		margin-right: 60px
@@ -3369,6 +3433,8 @@
 		margin-right: 0
 		width: 100%
 		margin-bottom: 10px
+		min-height: auto
+
 	.blog .blog-tabs .tabs
 		margin-bottom: 30px
 	.ambassadors__img:before
@@ -3441,9 +3507,7 @@
 		left: 60px
 		top: 80px
 		transform: scale(.7)
-	.ambassadors:after
-		width: 110px
-		height: 110px
+
 	.money-transfer
 		background-position: center 400px
 	.money-transfer__box-1
@@ -3534,6 +3598,13 @@
 			width: 250px
 
 @media (max-width: 450px)
+	.ambassadors-inside-surfaces--mobile
+		top: 70px
+		left: 90px
+	.ambassadors
+		&::before
+			left: 20px
+			bottom: 100px
 	.lifecycle-img
 		margin-top: 60px
 		max-height: 100%
