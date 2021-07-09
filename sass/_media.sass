@@ -84,7 +84,7 @@
 		li
 			font-size: 13px
 		ul
-			padding: 0px 18px 10px 17px
+			padding: 0px 9px 10px 17px
 			margin-top: -1px
 	.header__menu-list:not(:first-child)
 		margin-right: 35px
@@ -142,6 +142,10 @@
 		height: 533px
 
 @media (max-width: 1200px)
+
+	.header__menu
+		margin-left: 20px
+
 	body.theme--ligth .broadcast__img, .broadcast__img
 		max-width: 570px
 		height: auto
@@ -438,6 +442,52 @@
 		.contact-form
 			max-width: 600px
 @media (max-width: 1040px)
+	.affiliate-ambassador-item--mobile
+		.card-circle__icon
+			margin: 0 auto 24px
+		&:last-child
+			margin-top: 22px
+	.affiliate-ambassador-item__li span
+		display: block
+		width: 240px
+		margin: 0 auto
+	.affiliate-ambassador
+		&__items--mobile
+			text-align: center
+		&-item
+			&__heading--mobile
+				font-size: 18px
+				line-height: 30px
+				color: var(--color-title)
+				margin-top: 25px
+				font-weight: 600
+			&__text--mobile
+				font-size: 14px
+				line-height: 20px
+				color: var(--color-text)
+				margin-top: 10px
+				margin-bottom: 20px
+			&__list-slider
+				.slick-track
+					display: flex
+				li
+					padding: 70px 20px 30px
+					background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
+					box-shadow: var(--box-shadow)
+					border-radius: 12px
+					color: var(--color-card-heading)
+					justify-content: center
+					width: 260px
+					margin: 20px 20px
+					height: inherit
+					&:before
+						position: absolute
+						width: 20px
+						height: 18px
+						top: 30px
+						left: 50%
+						margin-left: -10px
+
 	h1
 		font-size: 50px
 		line-height: 50px
@@ -566,7 +616,7 @@
 		padding: 0
 
 	.ambassadors-steps__items .slick-list
-		padding: 60px 50px 0 0 !important
+		padding: 60px 50px 0 90px !important
 
 	.ambassadors-steps__heading
 		margin-bottom: 80px
@@ -1108,7 +1158,8 @@
 @media (max-width: 900px)
 	#ambassadors-surfaces
 		display: none
-
+	.advantages__item .card__heading
+		text-align: left
 	.top-surfaces
 		top: -240px
 	.monetize
@@ -1360,8 +1411,7 @@
 			max-width: none
 			margin-top: 40px
 			background-position: center center
-	.ambassadors-steps__items
-		padding-left: 80px
+
 	.features .circle-users
 		transform: scale(.8)
 	.monetization__img
@@ -1473,6 +1523,9 @@
 		line-height: 32px
 	p
 		line-height: 24px
+	.ambassadors-steps__items .slick-list
+		padding: 60px 50px 0 0px !important
+
 	.circle:nth-child(2)
 		margin: 0
 	.footer__bottom-list
@@ -1683,8 +1736,6 @@
 			grid-template-columns: none
 		&__item
 			min-height: 234px
-		&__item-heading
-			//color: $white !important
 		&__text
 			margin-bottom: 0
 		&__link
@@ -2440,42 +2491,42 @@
 	body.theme--ligth .affiliate-ambassador-item__list-slider li
 		background: #fff
 
-	.affiliate-ambassador
-		&__items--mobile
-			text-align: center
-		&-item
-			&__heading--mobile
-				font-size: 18px
-				line-height: 30px
-				color: var(--color-title)
-				margin-top: 25px
-				font-weight: 600
-			&__text--mobile
-				font-size: 14px
-				line-height: 20px
-				color: var(--color-text)
-				margin-top: 10px
-				margin-bottom: 20px
-			&__list-slider
-				.slick-track
-					display: flex
-				li
-					padding: 70px 20px 30px
-					background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
-					box-shadow: var(--box-shadow)
-					border-radius: 12px
-					color: var(--color-card-heading)
-					justify-content: center
-					width: 260px
-					margin: 20px 20px
-					height: inherit
-					&:before
-						position: absolute
-						width: 20px
-						height: 18px
-						top: 30px
-						left: 50%
-						margin-left: -10px
+	// .affiliate-ambassador
+	// 	&__items--mobile
+	// 		text-align: center
+	// 	&-item
+	// 		&__heading--mobile
+	// 			font-size: 18px
+	// 			line-height: 30px
+	// 			color: var(--color-title)
+	// 			margin-top: 25px
+	// 			font-weight: 600
+	// 		&__text--mobile
+	// 			font-size: 14px
+	// 			line-height: 20px
+	// 			color: var(--color-text)
+	// 			margin-top: 10px
+	// 			margin-bottom: 20px
+	// 		&__list-slider
+	// 			.slick-track
+	// 				display: flex
+	// 			li
+	// 				padding: 70px 20px 30px
+	// 				background: linear-gradient(135deg, #2D2F33 0%, #282A2E 51.33%, #212429 99.1%)
+	// 				box-shadow: var(--box-shadow)
+	// 				border-radius: 12px
+	// 				color: var(--color-card-heading)
+	// 				justify-content: center
+	// 				width: 260px
+	// 				margin: 20px 20px
+	// 				height: inherit
+	// 				&:before
+	// 					position: absolute
+	// 					width: 20px
+	// 					height: 18px
+	// 					top: 30px
+	// 					left: 50%
+	// 					margin-left: -10px
 		&-card--mobile
 			padding: 30px 20px 40px
 			background: linear-gradient(135deg, #00BBFF 0%, #9C42F5 53%, #5D2DE1 100%)

@@ -402,19 +402,48 @@ $(function () {
             $('.affiliate-ambassador-item__list-slider').slick({
                 infinite: true,
                 speed: 500,
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 centerMode: true,
-                arrows: false
+                arrows: false,
+                responsive: [{
+                    breakpoint: 650,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: false,
+                    }
+                }, ]
+
             });
         }
         $('.ambassadors-steps__items').slick({
             infinite: false,
             speed: 500,
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
-            centerMode: true,
-            arrows: false
+            centerMode: false,
+            arrows: false,
+            variableWidth: true,
+            responsive: [{
+                    breakpoint: 789,
+                    settings: {
+                        slidesToShow: 2,
+                        variableWidth: false,
+                    }
+                },
+                {
+                    breakpoint: 616,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: false,
+                    }
+                },
+
+            ]
+        });
+        $(".ambassadors-steps__items .ambassadors-steps-item").on("click", function () {
+            const index = $(this).attr("data-slick-index");
+            $(".ambassadors-steps__items").slick("slickGoTo", index);
         });
         if ($('.pricing-item').length > 0) {
             $('.pricing-item').last().clone().addClass('pricing-item--custom').insertAfter($('.pricing-item').last());
